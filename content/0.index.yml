@@ -6,14 +6,14 @@ seo:
 navigation: false
 hero:
   links:
-    - label: Get started
+    - label: Start Learning!
       icon: i-lucide-arrow-right
       trailing: true
       to: https://ui.nuxt.com/getting-started/installation/pro/nuxt
       target: _blank
       size: xl
-    - label: Use this template
-      icon: i-simple-icons-github
+    - label: See the Scoreboard
+      icon: i-lucide-medal
       size: xl
       color: neutral
       variant: subtle
