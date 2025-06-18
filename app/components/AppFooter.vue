@@ -4,7 +4,7 @@ const columns = [{
   children: [{
     label: 'Help center'
   }, {
-    label: 'WCF'
+    label: ''
   }, {
     label: 'Roadmap'
   }, {
