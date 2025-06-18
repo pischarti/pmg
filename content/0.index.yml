@@ -20,13 +20,13 @@ hero:
       to: https://github.com/nuxt-ui-pro/saas
       target: _blank
 sections:
-  - title: Enterprise-Grade Solutions
-    description: Transform your business with our comprehensive suite of tools. Built for scale, security, and seamless integration, our platform empowers teams to achieve more while maintaining complete control.
+  - title: Why is the Westminster Confession of Faith important?
+    description: See how the Westminster Confession of Faith has shaped Reformed theology and practice.
     id: features
     orientation: horizontal
     features:
-      - name: Developer-First
-        description: Built by developers for developers, with extensive API documentation and flexible integration options.
+      - name: Rich History
+        description: The Westminster Confession of Faith was created in the 17th century by the Westminster Assembly, a group of theologians and scholars who sought to clarify and codify Reformed doctrine.
         icon: i-lucide-cog
       - name: 99.9% Uptime
         description: Enterprise-grade infrastructure with guaranteed reliability and automatic failover protection.
