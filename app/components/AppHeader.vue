@@ -2,11 +2,11 @@
 const route = useRoute()
 
 const items = computed(() => [{
-  label: 'WCF',
+  label: 'Lessons',
   to: '/docs',
   active: route.path.startsWith('/docs')
 }, {
-  label: 'Lessons',
+  label: 'WCF',
   to: '/pricing'
 }, {
   label: 'Updates',
