@@ -36,7 +36,7 @@ const links = [{
   icon: 'i-lucide-book',
   to: '/docs/getting-started'
 }, {
-  label: 'Pricing',
+  label: 'Subscribe',
   icon: 'i-lucide-credit-card',
   to: '/pricing'
 }, {
