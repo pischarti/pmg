@@ -16,6 +16,7 @@ pkgs.mkShellNoCC {
     
     jq
     git
+    gh
     
     ruby
     node-gyp
