@@ -59,14 +59,14 @@ plans:
 logos:
   title: Trusted by the world's best
   icons:
-    - i-simple-icons-amazonaws
-    - i-simple-icons-heroku
-    - i-simple-icons-netlify
-    - i-simple-icons-vercel
-    - i-simple-icons-cloudflare
+    - i-lucide-book
+    - i-lucide-keyboard
+    - i-lucide-newspaper
+    - i-lucide-pen-tool
+    - i-lucide-mail
 faq:
   title: Frequently asked questions
-  description: Culpa consectetur dolor pariatur commodo aliqua amet tempor nisi enim deserunt elit cillum.
+  description: Here are some of the most common questions we receive about our plans and services. If you have any other questions, feel free to contact us.
   items:
     - label: Is this a secure service?
       content: Qui sunt nostrud aliquip reprehenderit enim proident veniam magna aliquip velit occaecat eiusmod nisi deserunt sunt.
