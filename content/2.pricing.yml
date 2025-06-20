@@ -68,16 +68,16 @@ faq:
   title: Frequently asked questions
   description: Here are some of the most common questions we receive about our plans and services. If you have any other questions, feel free to contact us.
   items:
-    - label: Is this a secure service?
-      content: Qui sunt nostrud aliquip reprehenderit enim proident veniam magna aliquip velit occaecat eiusmod nisi deserunt sunt.
+    - label: Is there a free trial?
+      content: You can get one free newspaper and see how you like it. 
       defaultOpen: true
     - label: How can I cancel my subscription?
-      content: Consectetur irure Lorem nostrud adipisicing aliqua mollit Lorem sit officia magna eiusmod cupidatat.
-    - label: How does the free trial work?
-      content: Quis officia commodo magna eu qui aliquip duis.
+      content: You can call us to cancel your subscription at any time.
+    - label: What payment methods do you accept?
+      content: We're sorry but we only accept cash at the moment. We are working on adding more payment methods in the future.
     - label: Can I switch plans later?
-      content: Dolore irure ullamco dolore eu occaecat magna eiusmod dolor aliqua culpa labore.
+      content: Yes, you can switch plans at any time. Just contact us and we'll help you with the process.
     - label: Do you offer refunds?
-      content: Duis mollit nostrud voluptate mollit Lorem dolore commodo veniam incididunt eiusmod.
-    - label: Do you offer support?
-      content: Aliqua sit nisi consequat pariatur Lorem minim irure qui.
+      content: We do not offer refunds for any of our plans. However, if you are not satisfied with your purchase, please contact us and we'll do our best to resolve the issue.
+    - label: Is the newpaper available in print?
+      content: Yes, but it will cost you an extra $5.99 per month. You can choose to receive the newspaper in print or digital format when you subscribe.
