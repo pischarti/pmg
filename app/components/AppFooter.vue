@@ -26,11 +26,11 @@ const columns = [{
   children: [{
     label: 'About'
   }, {
-    label: 'Pricing'
+    label: 'SDG Times'
   }, {
     label: 'Careers'
   }, {
-    label: 'Blog'
+    label: 'Subscribe'
   }]
 }]
 

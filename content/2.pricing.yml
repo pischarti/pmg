@@ -1,55 +1,55 @@
-title: A plan for every need
-description: Our plans are designed to meet the requirements of both beginners and players. Get the right plan that suits you.
+title: Subscribe to the SDG Times!
+description: Subscribe to the SDG Times to receive the latest updates on our weekly newsletter! Thanks for your support!
 seo:
   title: Pricing
   description: Choose the plan that's right for you.
 navigation.icon: i-lucide-credit-card
 plans:
   - title: Basic
-    description: A basic plan for individuals.
+    description: A inexpensive month of the SDG Times.
     price:
       month: $9.9
       year: $99.9
     button:
-      label: Get Started
+      label: Begin Basic Plan
       color: neutral
       variant: subtle
     features:
-      - 1 GB Storage
-      - 1 Email Account
-      - 1 Domain
-      - 1 Website
-      - 1 Database
-      - 1 SSL Certificate
-      - 1 Support Ticket
+      - One month/year of articles including:
+      - News Flash
+      - Theology
+      - Short Bio
+      - Stories
+      - Poetry
+      - And so much more!
   - title: Standard
-    description: A standard plan for small teams.
+    description: A standard plan to get these wonderful articles every month.
     price:
       month: $19.9
       year: $199.9
     highlight: true
     scale: true
     button:
-      label: Get Started
+      label: Begin Standard Plan
     features:
-      - 10 GB Storage
-      - 10 Email Accounts
-      - 10 Domains
-      - 10 Websites
-      - 10 Databases
-      - 10 SSL Certificates
-      - 10 Support Tickets
+      - One month/year of articles including:
+      - An illustration
+      - If you're lucky, an interview
+      - Curious Facts
+      - Scientific Facts
+      - 1 extra page filled with articles
+      - And so much more!
   - title: Premium
-    description: A premium plan for large teams.
+    description: A premium plan to get the best of the SDG Times.
     price:
       month: $29.9
       year: $299.9
     button:
-      label: Get Started
+      label: Begin Premium Plan
       color: neutral
       variant: subtle
     features:
-      - 100 GB Storage
+      - One month/year of articles including:
       - 100 Email Accounts
       - 100 Domains
       - 100 Websites
