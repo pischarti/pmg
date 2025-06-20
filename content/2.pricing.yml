@@ -15,7 +15,7 @@ plans:
       color: neutral
       variant: subtle
     features:
-      - One month/year of articles including:
+      - One month/year of articles including,
       - News Flash
       - Theology
       - Short Bio
@@ -32,7 +32,7 @@ plans:
     button:
       label: Begin Standard Plan
     features:
-      - One month/year of articles including:
+      - One month/year of articles including,
       - An illustration
       - If you're lucky, an interview
       - Curious Facts
@@ -49,13 +49,13 @@ plans:
       color: neutral
       variant: subtle
     features:
-      - One month/year of articles including:
-      - 100 Email Accounts
-      - 100 Domains
-      - 100 Websites
-      - 100 Databases
-      - 100 SSL Certificates
-      - 100 Support Tickets
+      - One month/year of articles including,
+      - An illustration
+      - Another extra page filled to the brim with articles
+      - Vocab matches
+      - Sudoku
+      - Binary puzzles
+      - And so much more!
 logos:
   title: Trusted by the world's best
   icons:
