@@ -37,7 +37,7 @@ const providers = [{
     toast.add({ title: 'Google', description: 'Log in with a Magic Link' })
   }
 }, {
-  
+
 }]
 
 const schema = z.object({
