@@ -128,5 +128,14 @@ export const collections = {
   blog: defineCollection({
     source: '3.blog.yml',
     type: 'page'
+  }),
+  wcf: defineCollection({
+    source: 'wcf.yml',
+    type: 'data',
+    schema: z.object({
+      Chapter: z.string(),
+      Section: z.string(),
+      Content: z.string()
+    })
   })
 }
