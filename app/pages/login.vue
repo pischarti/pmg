@@ -31,17 +31,13 @@ const fields = [{
 }]
 
 const providers = [{
-  label: 'Google',
-  icon: 'i-simple-icons-google',
+  label: 'Magic Link',
+  icon: 'i-lucide-wand-sparkles',
   onClick: () => {
-    toast.add({ title: 'Google', description: 'Login with Google' })
+    toast.add({ title: 'Google', description: 'Log in with a Magic Link' })
   }
 }, {
-  label: 'GitHub',
-  icon: 'i-simple-icons-github',
-  onClick: () => {
-    toast.add({ title: 'GitHub', description: 'Login with GitHub' })
-  }
+
 }]
 
 const schema = z.object({

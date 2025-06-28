@@ -6,11 +6,11 @@ const items = computed(() => [{
   to: '/docs',
   active: route.path.startsWith('/docs')
 }, {
-  label: 'Pricing',
-  to: '/pricing'
-}, {
-  label: 'Blog',
+  label: 'SDG Times',
   to: '/blog'
+}, {
+  label: 'Subscribe',
+  to: '/pricing'
 }])
 </script>
 

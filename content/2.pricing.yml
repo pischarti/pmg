@@ -1,83 +1,83 @@
-title: A plan for every need
-description: Our plans are designed to meet the requirements of both beginners and players. Get the right plan that suits you.
+title: Subscribe to the SDG Times!
+description: Subscribe to the SDG Times to receive the latest updates on our weekly newsletter! Thanks for your support!
 seo:
   title: Pricing
   description: Choose the plan that's right for you.
 navigation.icon: i-lucide-credit-card
 plans:
   - title: Basic
-    description: A basic plan for individuals.
+    description: A inexpensive month of the SDG Times.
     price:
       month: $9.9
       year: $99.9
     button:
-      label: Get Started
+      label: Begin Basic Plan
       color: neutral
       variant: subtle
     features:
-      - 1 GB Storage
-      - 1 Email Account
-      - 1 Domain
-      - 1 Website
-      - 1 Database
-      - 1 SSL Certificate
-      - 1 Support Ticket
+      - One month/year of articles including,
+      - News Flash
+      - Theology
+      - Short Bio
+      - Stories
+      - Poetry
+      - And so much more!
   - title: Standard
-    description: A standard plan for small teams.
+    description: A standard plan to get these wonderful articles every month.
     price:
       month: $19.9
       year: $199.9
     highlight: true
     scale: true
     button:
-      label: Get Started
+      label: Begin Standard Plan
     features:
-      - 10 GB Storage
-      - 10 Email Accounts
-      - 10 Domains
-      - 10 Websites
-      - 10 Databases
-      - 10 SSL Certificates
-      - 10 Support Tickets
+      - One month/year of articles including,
+      - An illustration
+      - If you're lucky, an interview
+      - Curious Facts
+      - Scientific Facts
+      - 1 extra page filled with articles
+      - And so much more!
   - title: Premium
-    description: A premium plan for large teams.
+    description: A premium plan to get the best of the SDG Times.
     price:
       month: $29.9
       year: $299.9
     button:
-      label: Get Started
+      label: Begin Premium Plan
       color: neutral
       variant: subtle
     features:
-      - 100 GB Storage
-      - 100 Email Accounts
-      - 100 Domains
-      - 100 Websites
-      - 100 Databases
-      - 100 SSL Certificates
-      - 100 Support Tickets
+      - One month/year of articles including,
+      - An illustration
+      - Another extra page filled to the brim with articles
+      - Vocab matches
+      - Sudoku
+      - Binary puzzles
+      - And so much more!
 logos:
   title: Trusted by the world's best
   icons:
-    - i-simple-icons-amazonaws
-    - i-simple-icons-heroku
-    - i-simple-icons-netlify
-    - i-simple-icons-vercel
-    - i-simple-icons-cloudflare
+    - i-lucide-book
+    - i-lucide-keyboard
+    - i-lucide-newspaper
+    - i-lucide-pen-tool
+    - i-lucide-mail
 faq:
   title: Frequently asked questions
-  description: Culpa consectetur dolor pariatur commodo aliqua amet tempor nisi enim deserunt elit cillum.
+  description: Here are some of the most common questions we receive about our plans and services. If you have any other questions, feel free to contact us.
   items:
-    - label: Is this a secure service?
-      content: Qui sunt nostrud aliquip reprehenderit enim proident veniam magna aliquip velit occaecat eiusmod nisi deserunt sunt.
+    - label: Is there a free trial?
+      content: You can get one free newspaper and see how you like it. 
       defaultOpen: true
     - label: How can I cancel my subscription?
-      content: Consectetur irure Lorem nostrud adipisicing aliqua mollit Lorem sit officia magna eiusmod cupidatat.
-    - label: How does the free trial work?
-      content: Quis officia commodo magna eu qui aliquip duis.
+      content: You can call us to cancel your subscription at any time.
+    - label: What payment methods do you accept?
+      content: We're sorry but we only accept cash at the moment. We are working on adding more payment methods in the future.
     - label: Can I switch plans later?
-      content: Dolore irure ullamco dolore eu occaecat magna eiusmod dolor aliqua culpa labore.
+      content: Yes, you can switch plans at any time. Just contact us and we'll help you with the process.
     - label: Do you offer refunds?
-      content: Duis mollit nostrud voluptate mollit Lorem dolore commodo veniam incididunt eiusmod.
-    - label: Do you offer support?
-      content: Aliqua sit nisi consequat pariatur Lorem minim irure qui.
+      content: We do not offer refunds for any of our plans. However, if you are not satisfied with your purchase, please contact us and we'll do our best to resolve the issue.
+    - label: Is the newpaper available in print?
+      content: Yes, but it will cost you an extra $5.99 per month. You can choose to receive the newspaper in print or digital format when you subscribe.
