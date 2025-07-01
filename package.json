@@ -21,6 +21,7 @@
     "@vueuse/nuxt": "^13.3.0",
     "better-sqlite3": "^11.10.0",
     "nuxt": "^3.17.5",
+    "nuxt-auth-utils": "0.5.20",
     "nuxt-og-image": "^5.1.6",
     "zod": "^3.25.57"
   },
