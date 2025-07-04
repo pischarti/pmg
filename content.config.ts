@@ -133,9 +133,31 @@ export const collections = {
     source: 'wcf.yml',
     type: 'data',
     schema: z.object({
-      Chapter: z.string(),
-      Section: z.string(),
-      Content: z.string()
+      Metadata: z.object({
+        AlternativeTitles: z.array(z.string()),
+        Authors: z.array(z.string()),
+        CreedFormat: z.string(),
+        Location: z.string(),
+        OriginStory: z.string(),
+        OriginalLanguage: z.string(),
+        SourceAttribution: z.string(),
+        SourceUrl: z.string(),
+        Title: z.string(),
+        Year: z.string()
+      }),
+      Data: z.array(z.object({
+        Chapter: z.string(),
+        Sections: z.array(z.object({
+          Content: z.string(),
+          ContentWithProofs: z.string(),
+          Proofs: z.array(z.object({
+            Id: z.number(),
+            Reference: z.array(z.string())
+          })),
+          Section: z.string()
+        })),
+        Title: z.string()
+      }))
     })
   })
 }
