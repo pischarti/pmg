@@ -31,7 +31,7 @@
               kustomize_4
                         
               nodejs
-              pnpm_8
+              pnpm_10
           
               go
               python314
