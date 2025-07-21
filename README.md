@@ -4,6 +4,7 @@
 
 - Install [nix](https://zero-to-nix.com/concepts/nix-installer/)
 - Build dev shell `nix develop`
+- Add `nix` language server `nix profile install nixpkgs#nixd`
 
 ## Setup
 
