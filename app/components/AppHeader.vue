@@ -17,10 +17,7 @@ const items = computed(() => [{
 <template>
   <UHeader>
     <template #left>
-      <NuxtLink to="/">
-        <LogoPro class="w-auto h-6 shrink-0" />
-      </NuxtLink>
-      <TemplateMenu />
+      Pischarti
     </template>
 
     <UNavigationMenu

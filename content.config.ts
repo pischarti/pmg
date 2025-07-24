@@ -33,6 +33,15 @@ const createImageSchema = () => z.object({
 })
 
 export const collections = {
+  authors: defineCollection({
+    type: 'data',
+    source: 'authors/**.yml',
+    schema: z.object({
+      name: z.string(),
+      avatar: z.string(),
+      url: z.string()
+    })
+  }),
   docs: defineCollection({
     type: 'page',
     source: '1.docs/**/*'

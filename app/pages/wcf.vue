@@ -1,34 +1,23 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData("pricing", () =>
-  queryCollection("pricing").first(),
-);
+// Find a single author
+const { data: author } = await useAsyncData('larbish', () => {
+  return queryCollection('authors')
+    .where('name', '=', 'Baptiste Leproux')
+    .first()
+})
 
-const title = page.value?.seo?.title || page.value?.title;
-const description = page.value?.seo?.description || page.value?.description;
-
-useSeoMeta({
-  title,
-  ogTitle: title,
-  description,
-  ogDescription: description,
-});
-
-defineOgImageComponent("Saas");
-
-const isYearly = ref("0");
-
-const items = ref([
-  {
-    label: "Monthly",
-    value: "0",
-  },
-  {
-    label: "Yearly",
-    value: "1",
-  },
-]);
+// Get all authors
+const { data: authors } = await useAsyncData('authors', () => {
+  return queryCollection('authors')
+    .order('name', 'DESC')
+    .all()
+})
 </script>
 
 <template>
-
+  <div>
+    author: {{ author }}
+    <p />
+    authors: {{ authors }}
+  </div>
 </template>
