@@ -33,6 +33,15 @@ const createImageSchema = () => z.object({
 })
 
 export const collections = {
+  wcf: defineCollection({
+    type: 'data',
+    source: 'wcf.yml',
+    schema: z.object({
+      name: z.string(),
+      avatar: z.string(),
+      url: z.string()
+    })
+  }),
   authors: defineCollection({
     type: 'data',
     source: 'authors/**.yml',

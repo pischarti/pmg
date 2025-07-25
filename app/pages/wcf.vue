@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // Find a single author
-const { data: author } = await useAsyncData('larbish', () => {
+const { data: Baptiste } = await useAsyncData('larbish', () => {
   return queryCollection('authors')
     .where('name', '=', 'Baptiste Leproux')
     .first()
@@ -16,8 +16,8 @@ const { data: authors } = await useAsyncData('authors', () => {
 
 <template>
   <div>
-    author: {{ author }}
+    author: {{ Baptiste?.meta.body.name }}
     <p />
-    authors: {{ authors }}
+    authors: {{ authors.map(a => a.meta.body.name) }}
   </div>
 </template>

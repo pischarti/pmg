@@ -3,8 +3,10 @@
 ## Dev Environment with Nix
 
 - Install [nix](https://zero-to-nix.com/concepts/nix-installer/)
+- Add 'experimental-features = nix-command flakes' to ~/.config/nix/nix.conf to enable this feature
 - Build dev shell `nix develop`
 - Add `nix` language server `nix profile install nixpkgs#nixd`
+- To make it look nice again, use 'zsh'
 
 ## Setup
 
