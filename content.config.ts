@@ -37,9 +37,12 @@ export const collections = {
     type: 'data',
     source: 'wcf.yml',
     schema: z.object({
-      name: z.string(),
-      avatar: z.string(),
-      url: z.string()
+      Metadata: z.object({
+        AlternativeTitles: z.string()
+      }),
+      Data: z.array(z.object({
+        Chapter: z.string()
+      }))
     })
   }),
   authors: defineCollection({
@@ -146,14 +149,5 @@ export const collections = {
   blog: defineCollection({
     source: '3.blog.yml',
     type: 'page'
-  }),
-  wcf: defineCollection({
-    source: 'wcf.yml',
-    type: 'data',
-    schema: z.object({
-      Chapter: z.string(),
-      Section: z.string(),
-      Content: z.string()
-    })
   })
 }
