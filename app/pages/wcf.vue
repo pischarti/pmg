@@ -9,6 +9,6 @@ const { data: wcf } = await useAsyncData('wcf', () => {
 
 <template>
   <div>
-    wcf: {{ JSON.stringify(wcf?.Data, null, 2) }}
+    {{ wcf?.Data.map(d => d.Chapter) }}
   </div>
 </template>
