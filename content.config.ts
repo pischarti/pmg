@@ -1,36 +1,57 @@
 import { defineCollection, z } from '@nuxt/content'
 
-const variantEnum = z.enum(['solid', 'outline', 'subtle', 'soft', 'ghost', 'link'])
-const colorEnum = z.enum(['primary', 'secondary', 'neutral', 'error', 'warning', 'success', 'info'])
+const variantEnum = z.enum([
+  'solid',
+  'outline',
+  'subtle',
+  'soft',
+  'ghost',
+  'link'
+])
+
+const colorEnum = z.enum([
+  'primary',
+  'secondary',
+  'neutral',
+  'error',
+  'warning',
+  'success',
+  'info'
+])
+
 const sizeEnum = z.enum(['xs', 'sm', 'md', 'lg', 'xl'])
 const orientationEnum = z.enum(['vertical', 'horizontal'])
 
-const createBaseSchema = () => z.object({
-  title: z.string().nonempty(),
-  description: z.string().nonempty()
-})
+const createBaseSchema = () =>
+  z.object({
+    title: z.string().nonempty(),
+    description: z.string().nonempty()
+  })
 
-const createFeatureItemSchema = () => createBaseSchema().extend({
-  icon: z.string().nonempty().editor({ input: 'icon' })
-})
+const createFeatureItemSchema = () =>
+  createBaseSchema().extend({
+    icon: z.string().nonempty().editor({ input: 'icon' })
+  })
 
-const createLinkSchema = () => z.object({
-  label: z.string().nonempty(),
-  to: z.string().nonempty(),
-  icon: z.string().optional().editor({ input: 'icon' }),
-  size: sizeEnum.optional(),
-  trailing: z.boolean().optional(),
-  target: z.string().optional(),
-  color: colorEnum.optional(),
-  variant: variantEnum.optional()
-})
+const createLinkSchema = () =>
+  z.object({
+    label: z.string().nonempty(),
+    to: z.string().nonempty(),
+    icon: z.string().optional().editor({ input: 'icon' }),
+    size: sizeEnum.optional(),
+    trailing: z.boolean().optional(),
+    target: z.string().optional(),
+    color: colorEnum.optional(),
+    variant: variantEnum.optional()
+  })
 
-const createImageSchema = () => z.object({
-  src: z.string().nonempty().editor({ input: 'media' }),
-  alt: z.string().optional(),
-  loading: z.string().optional(),
-  srcset: z.string().optional()
-})
+const createImageSchema = () =>
+  z.object({
+    src: z.string().nonempty().editor({ input: 'media' }),
+    alt: z.string().optional(),
+    loading: z.string().optional(),
+    srcset: z.string().optional()
+  })
 
 export const collections = {
   wcf: defineCollection({
@@ -38,11 +59,22 @@ export const collections = {
     source: 'wcf.yml',
     schema: z.object({
       Metadata: z.object({
-        AlternativeTitles: z.string()
+        AlternativeTitles: z.array(z.string()),
+        Authors: z.array(z.string()),
+        CreedFormat: z.string(),
+        Location: z.string(),
+        OriginStory: z.string(),
+        OriginalLanguage: z.string(),
+        SourceAttribution: z.string(),
+        SourceUrl: z.string(),
+        Title: z.string(),
+        Year: z.string()
       }),
-      Data: z.array(z.object({
-        Chapter: z.string()
-      }))
+      Data: z.array(
+        z.object({
+          Chapter: z.string()
+        })
+      )
     })
   }),
   authors: defineCollection({
@@ -62,12 +94,16 @@ export const collections = {
     type: 'page',
     source: '3.blog/**/*',
     schema: z.object({
-      image: z.object({ src: z.string().nonempty().editor({ input: 'media' }) }),
+      image: z.object({
+        src: z.string().nonempty().editor({ input: 'media' })
+      }),
       authors: z.array(
         z.object({
           name: z.string().nonempty(),
           to: z.string().nonempty(),
-          avatar: z.object({ src: z.string().nonempty().editor({ input: 'media' }) })
+          avatar: z.object({
+            src: z.string().nonempty().editor({ input: 'media' })
+          })
         })
       ),
       date: z.date(),
@@ -78,9 +114,9 @@ export const collections = {
     source: '0.index.yml',
     type: 'page',
     schema: z.object({
-      hero: z.object(({
+      hero: z.object({
         links: z.array(createLinkSchema())
-      })),
+      }),
       sections: z.array(
         createBaseSchema().extend({
           id: z.string().nonempty(),

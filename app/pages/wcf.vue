@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// Find a single author
+
 const { data: wcf } = await useAsyncData('wcf', () => {
   return queryCollection('wcf')
     .first()
@@ -9,6 +9,6 @@ const { data: wcf } = await useAsyncData('wcf', () => {
 
 <template>
   <div>
-    wcf: {{ wcf?.meta.body.Metadata.AlternativeTitles }}
+    wcf: {{ JSON.stringify(wcf?.Data, null, 2) }}
   </div>
 </template>
