@@ -23,8 +23,9 @@ const navigation = ref([
     path: '/wcf/composables',
     children: [
       {
-        title: 'defineShortcuts',
-        path: '/wcf/defineshortcuts'
+        title: 'chapter 2'
+        path: '/wcf/chapter 2'
+        
       },
       {
         title: 'useModal',
