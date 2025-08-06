@@ -28,8 +28,7 @@ const navigation = ref([
         
       },
       {
-        title: 'useModal',
-        path: '/wcf/usemodal'
+     
       }
     ]
   }
