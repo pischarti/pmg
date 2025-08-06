@@ -3,32 +3,47 @@
 const navigation = ref([
   {
     title: 'Guide',
-    icon: 'i-lucide-book-open',
+    icon: 'i-lucide-panda',
     path: '#getting-started',
     children: [
       {
         title: 'Introduction',
-        path: '/wcf/introduction',
+        path: ' I am Your Introduction. I am also a panda.',
         active: true
-      },
-      {
-        title: 'Installation',
-        path: '/wcf/installation'
       }
     ]
   },
   {
-    title: 'Composables',
-    icon: 'i-lucide-database',
+    title: 'Unit 1',
+    icon: 'i-lucide-fish',
+    path: '/wcf/composable',
+    children: [
+      {
+        title: 'Chapter 1',
+        path: ' Hullo. I am Chapter one, the Fish, the first chapter of The Big Boring Book.'
+      }
+    ]
+  },
+  {
+    title: 'Unit 2',
+    icon: 'i-lucide-squirrel',
     path: '/wcf/composables',
     children: [
       {
-        title: 'defineShortcuts',
-        path: '/wcf/defineshortcuts'
+        title: 'Chapter 2',
+        path: ' I am chapter two of the Big Boring Book.'
       },
       {
-        title: 'useModal',
-        path: '/wcf/usemodal'
+        title: 'Chapter 3',
+        path: ' I am chapter three of the Big Boring Book.'
+      },
+      {
+        title: 'Chapter 4',
+        path: ' I am chapter four of the Big Boring Book.'
+      },
+      {
+        title: 'Chapter 5',
+        path: ' I am chapter five of the Big Boring Book.'
       }
     ]
   }
