@@ -1,4 +1,9 @@
 <script setup lang="ts">
+definePageMeta({
+  layout: 'wcf'
+})
+
+const route = useRoute()
 
 const { data: wcf } = await useAsyncData('wcf', () => {
   return queryCollection('wcf')
@@ -9,6 +14,6 @@ const { data: wcf } = await useAsyncData('wcf', () => {
 
 <template>
   <div>
-    {{ wcf?.Data.map(d => d.Chapter) }}
+    {{ route.path.includes('cat') ? 'Meow' : route.path }}
   </div>
 </template>
