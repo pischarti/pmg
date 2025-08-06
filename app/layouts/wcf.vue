@@ -18,9 +18,9 @@ const navigation = ref([
     ]
   },
   {
-    title: 'Composables',
-    icon: 'i-lucide-database',
-    path: '/wcf/composables',
+    title: 'Unit 2',
+    icon: 'i-lucide-album',
+    path: '/wcf/Unit 2',
     children: [
       {
         title: 'chapter 2'
