@@ -10,10 +10,16 @@ const _route = useRoute()
 const { wcf } = await useWcf()
 const chapter = computed(() => {
   if (!wcf.value?.Data) return null
-  return wcf.value.Data.find(ch => ch.Chapter === '1')
+  const chapterMatch = _route.path.match(/chapter(\d+)/)
+  if (!chapterMatch) return null
+  return wcf.value.Data.find(ch => ch.Chapter === chapterMatch[1])
 })
 const title = computed(() => chapter.value ? `Chapter ${chapter.value.Chapter}` : 'Loading...')
-const description = 'Of the Holy Scripture'
+const description = computed(() => {
+  if (!wcf.value?.Metadata?.AlternativeTitles || !chapter.value) return ''
+  const index = parseInt(chapter.value.Chapter) - 1
+  return wcf.value.Metadata.AlternativeTitles[index] || ''
+})
 </script>
 
 <template>
