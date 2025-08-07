@@ -19,6 +19,10 @@ const navigation = computed(() => {
   const categories = {
     'Introduction': {
       icon: 'i-lucide-book-open',
+      chapters: []
+    },
+    'Epistemology': {
+      icon: 'i-lucide-book-open',
       chapters: ['1']
     },
     'Theology Proper': {
