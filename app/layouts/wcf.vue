@@ -41,13 +41,13 @@ const navigation = ref([
       {
         title: 'Chapter 4',
         path: '/wcf/chapter4'
+      },
+      {  
+        title: 'Chapter 5',
+        path: '/wcf/chapter5'
       }
     ]
-      {  
-        title: 'Chapter 5'   
-        path:  '/wcf/chapter5'
-      }
-  }     
+  }    
 ])
 
 const sections = [
