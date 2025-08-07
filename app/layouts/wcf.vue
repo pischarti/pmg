@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const route = useRoute()
 
 const navigation = ref([
   {
@@ -10,35 +11,72 @@ const navigation = ref([
         title: 'Introduction',
         path: '/wcf/introduction',
         active: true
-      },
-      {
-        title: 'Installation',
-        path: '/wcf/installation'
       }
     ]
   },
   {
-    title: 'Composables',
-    icon: 'i-lucide-database',
-    path: '/wcf/composables',
+    title: 'Epistemology',
+    icon: 'i-lucide-brain',
+    path: '/wcf/epistemology',
     children: [
       {
-        title: 'defineShortcuts',
-        path: '/wcf/defineshortcuts'
+        title: 'Chapter 1',
+        path: '/wcf/chapter1'
+      }
+    ]
+  },
+  {
+    title: 'Theology Proper',
+    icon: 'i-lucide-database',
+    path: '/wcf/theologyproper',
+    children: [
+      {
+        title: 'Chapter 2',
+        path: '/wcf/chapter2'
       },
       {
-        title: 'useModal',
-        path: '/wcf/usemodal'
+        title: 'Chapter 3',
+        path: '/wcf/chapter3'
+      },
+      {
+        title: 'Chapter 4',
+        path: '/wcf/chapter4'
       }
     ]
   }
 ])
+
+const sections = [
+  {
+    id: 'usage',
+    depth: 2,
+    text: 'Usage',
+    children: [
+      {
+        id: 'title',
+        depth: 3,
+        text: 'Title'
+      },
+      {
+        id: 'color',
+        depth: 3,
+        text: 'Color'
+      },
+      {
+        id: 'blah',
+        depth: 3,
+        text: 'route.path'
+      }
+    ]
+  }
+]
+
+const links = ref(sections)
 </script>
 
 <!-- <template>
   <UContentNavigation type="single" />
 </template> -->
-
 
 <!-- <script setup lang="ts">
 import type { ContentNavigationItem } from '@nuxt/content'
@@ -59,14 +97,20 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
                 <UContentSearchButton :collapsed="false" />
               </template>
 
-              <UContentNavigation
-                :navigation="navigation"
-                highlight
-              />
+              <UContentNavigation :navigation="navigation" highlight />
+            </UPageAside>
+          </template>
+
+          <template #right>
+            <UPageAside>
+              <UContentToc :links="links" />
             </UPageAside>
           </template>
 
           <slot />
+          <!-- <div id="blah">
+            {{ route.path.includes("cat") ? "Meow" : "route.path" }}
+          </div> -->
         </UPage>
       </UContainer>
     </UMain>

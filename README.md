@@ -38,3 +38,8 @@ Locally preview production build:
 pnpm preview
 ```
 
+How to stash changes:
+
+```bash
+git stash --include-untracked
+```
