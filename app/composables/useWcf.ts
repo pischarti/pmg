@@ -15,6 +15,7 @@ interface WcfSection {
 interface WcfChapter {
   Chapter: string
   Sections: WcfSection[]
+  Title: string
 }
 
 interface WcfMetadata {

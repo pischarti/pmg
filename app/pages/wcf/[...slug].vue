@@ -14,12 +14,9 @@ const chapter = computed(() => {
   if (!chapterMatch) return null
   return wcf.value.Data.find(ch => ch.Chapter === chapterMatch[1])
 })
+
 const title = computed(() => chapter.value ? `Chapter ${chapter.value.Chapter}` : 'Loading...')
-const description = computed(() => {
-  if (!wcf.value?.Metadata?.AlternativeTitles || !chapter.value) return ''
-  const index = parseInt(chapter.value.Chapter) - 1
-  return wcf.value.Metadata.AlternativeTitles[index] || ''
-})
+const description = computed(() => chapter.value ? chapter.value.Title : '')
 </script>
 
 <template>
