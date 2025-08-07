@@ -72,7 +72,19 @@ export const collections = {
       }),
       Data: z.array(
         z.object({
-          Chapter: z.string()
+          Chapter: z.string(),
+          Sections: z.array(
+            z.object({
+              Content: z.string(),
+              ContentWithProofs: z.string().optional(),
+              Proofs: z.array(
+                z.object({
+                  Id: z.number(),
+                  References: z.array(z.string())
+                })
+              ).optional()
+            })
+          )
         })
       )
     })

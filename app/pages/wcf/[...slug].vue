@@ -1,15 +1,18 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useWcf } from '~/composables/useWcf'
+
 definePageMeta({
   layout: "wcf",
 });
 
 const route = useRoute()
-
-const { data: wcf } = await useAsyncData("wcf", () => {
-  return queryCollection("wcf").first()
+const { wcf } = await useWcf()
+const chapter = computed(() => {
+  if (!wcf.value?.Data) return null
+  return wcf.value.Data.find(ch => ch.Chapter === '1')
 })
-
-const title = 'Chapter I'
+const title = computed(() => chapter.value ? `Chapter ${chapter.value.Chapter}` : 'Loading...')
 const description = 'Of the Holy Scripture'
 const content: Record<string, string> = { blahblah: 'blah' }
 </script>
@@ -25,24 +28,13 @@ const content: Record<string, string> = { blahblah: 'blah' }
       </template>
     </UPageHero>
     <USeparator />
-    <UPageBody
-      v-for="(ch, index) in wcf.Data"
-      :key="index"
-    >
-      <div v-if="route.path.includes('ch1') && index == 0">
-        <div
-          v-for="(ss, si) in ch.Sections"
-          :key="si"
-        >
-          <div :id="`ss${si}`">
-            {{ ss.Content }}
-          </div>
-          <USeparator />
+    <UPageBody v-if="chapter">
+      <template v-for="(section, index) in chapter.Sections" :key="index">
+        <div :id="`section${index + 1}`">
+          {{ section.Content }}
         </div>
-      </div>
-      <div v-if="route.path.includes('ch2') && index == 1">
-        {{ ch }}
-      </div>
+        <USeparator v-if="index < chapter.Sections.length - 1" />
+      </template>
     </UPageBody>
   </div>
 </template>
