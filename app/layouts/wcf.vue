@@ -73,18 +73,24 @@ const links = computed(() => {
                 <UContentSearchButton :collapsed="false" />
               </template>
 
-              <UContentNavigation v-if="navigation.length" :navigation="navigation" highlight />
+              <UContentNavigation
+                v-if="navigation.length"
+                :navigation="navigation"
+                highlight
+              />
             </UPageAside>
           </template>
 
           <template #right>
             <UPageAside>
-              <UContentToc v-if="links.length" :links="links" />
+              <UContentToc
+                v-if="links.length"
+                :links="links"
+              />
             </UPageAside>
           </template>
 
           <slot />
-
         </UPage>
       </UContainer>
     </UMain>
