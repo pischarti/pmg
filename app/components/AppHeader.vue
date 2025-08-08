@@ -3,11 +3,8 @@ const route = useRoute()
 
 const items = computed(() => [{
   label: 'WCF',
-  to: '/docs',
+  to: '/wcf',
   active: route.path.startsWith('/docs')
-}, {
-  label: 'SDG Times',
-  to: '/blog'
 }, {
   label: 'Subscribe',
   to: '/pricing'
@@ -17,7 +14,12 @@ const items = computed(() => [{
 <template>
   <UHeader>
     <template #left>
-      Pischarti
+      <NuxtLink
+        to="/"
+        class="font-semibold hidden lg:inline"
+      >
+        WSC
+      </NuxtLink>
     </template>
 
     <UNavigationMenu
