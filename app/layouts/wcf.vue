@@ -26,7 +26,7 @@ const navigation = computed(() => {
       chapters: ['1']
     },
     'Theology Proper': {
-      icon: 'i-lucide-database',
+      icon: 'i-lucide-flame',
       chapters: ['2', '3', '4', '5']
     },
     'Anthropology': {
