@@ -50,18 +50,22 @@ const navigation = computed(() => {
 const links = computed(() => {
   if (!currentChapter.value) return []
 
-  return currentChapter.value.Sections.map((section, index) => {
-    // Take the first sentence or first 50 characters as the section title
-    const text = section.Content.split('.')[0] + '.'
-    const sectionTitle = text.length > 50 ? text.substring(0, 47) + '...' : text
-
-    return {
-      id: `section${index + 1}`,
-      depth: 2,
-      text: sectionTitle
-    }
-  })
+  return currentChapter.value.Sections.map((_, index) => ({
+    id: `section${index + 1}`,
+    depth: 2,
+    text: `Section ${index + 1}`,
+    number: index + 1
+  }))
 })
+
+function onTocMove(id: string) {
+  if (!id) return
+  const targetId = id.startsWith('#') ? id.slice(1) : id
+  const element = import.meta.client ? document.getElementById(targetId) : null
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+}
 </script>
 
 <template>
@@ -90,7 +94,12 @@ const links = computed(() => {
               <UContentToc
                 v-if="links.length"
                 :links="links"
-              />
+                @move="onTocMove"
+              >
+                <template #link="{ link }">
+                  Section {{ link.number }}
+                </template>
+              </UContentToc>
             </UPageAside>
           </template>
 

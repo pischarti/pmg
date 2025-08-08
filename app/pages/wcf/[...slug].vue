@@ -36,7 +36,10 @@ const title = computed(() => chapter.value ? chapter.value.Title : 'Loading...')
         v-for="(section, index) in chapter.Sections"
         :key="index"
       >
-        <div :id="`section${index + 1}`">
+        <div
+          :id="`section${index + 1}`"
+          class="scroll-mt-[calc(48px+var(--ui-header-height))]"
+        >
           {{ section.Content }}
         </div>
         <USeparator v-if="index < chapter.Sections.length - 1" />
