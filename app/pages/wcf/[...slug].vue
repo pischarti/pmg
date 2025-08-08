@@ -15,15 +15,13 @@ const chapter = computed(() => {
   return wcf.value.Data.find(ch => ch.Chapter === chapterMatch[1])
 })
 
-const title = computed(() => chapter.value ? `Chapter ${chapter.value.Chapter}` : 'Loading...')
-const description = computed(() => chapter.value ? chapter.value.Title : '')
+const title = computed(() => chapter.value ? chapter.value.Title : 'Loading...')
 </script>
 
 <template>
   <div>
     <UPageHero
       :title="title"
-      :description="description"
     >
       <template #top>
         <div
