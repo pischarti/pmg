@@ -54,7 +54,6 @@ const items = computed(() => [{
         to="/signup"
       />
     </template>
-
     <template #body>
       <UNavigationMenu
         :items="items"
