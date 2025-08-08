@@ -22,7 +22,7 @@ const navigation = computed(() => {
       chapters: []
     },
     'Epistemology': {
-      icon: 'i-lucide-book-open',
+      icon: 'i-lucide-brain',
       chapters: ['1']
     },
     'Theology Proper': {
