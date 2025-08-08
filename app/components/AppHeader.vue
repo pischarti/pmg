@@ -41,6 +41,7 @@ const chapterItems = computed(() => (wcf.value?.Data || []).map(ch => ({
         v-model:open="open"
         direction="left"
         class="lg:hidden"
+        title="Chapters"
       >
         <UButton
           icon="i-lucide-book-open"
