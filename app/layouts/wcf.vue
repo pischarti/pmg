@@ -46,7 +46,7 @@ const navigation = computed(() => {
     chapters: ['25', '26', '27', '28', '29', '30', '30']
      },
        'Eschatology': {
-    icon: 'i-lucide-bookmark-check',
+    icon: 'i-lucide-scale',
     chapters: ['31', '32']
        },
   }
