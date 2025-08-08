@@ -15,13 +15,22 @@ const chapter = computed(() => {
   return wcf.value.Data.find(ch => ch.Chapter === chapterMatch[1])
 })
 
-const title = computed(() => chapter.value ? chapter.value.Title : 'Loading...')
+const heroTitle = computed(() => {
+  if (chapter.value) return chapter.value.Title
+  if (_route.path === '/wcf' || _route.path === '/wcf/introduction') {
+    return wcf.value?.Metadata?.OriginStory || ''
+  }
+  return 'Loading...'
+})
+
+const title = 'Westminster Confession of Faith'
 </script>
 
 <template>
   <div>
     <UPageHero
-      :title="title"
+      :headline="title"
+      :description="heroTitle"
     >
       <template #top>
         <div
@@ -40,6 +49,9 @@ const title = computed(() => chapter.value ? chapter.value.Title : 'Loading...')
           :id="`section${index + 1}`"
           class="scroll-mt-[calc(48px+var(--ui-header-height))]"
         >
+          <h2 class="text-2xl font-bold text-highlighted mt-8 mb-4">
+            Section {{ index + 1 }}
+          </h2>
           {{ section.Content }}
         </div>
         <USeparator v-if="index < chapter.Sections.length - 1" />
