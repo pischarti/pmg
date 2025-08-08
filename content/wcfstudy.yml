@@ -1,20 +1,49 @@
 Metadata:
-  AlternativeTitles:
-  - 'The humble advice of the Assembly of Divines, now by authority of Parliament
-    sitting at Westminster, concerning a confession of faith: with the quotations
-    and texts of Scripture annexed; presented by them lately to both Houses of Parliament'
   Authors:
-  - Westminster Assembly
-  CreedFormat: Confession
-  Location: London, England
-  OriginStory: The Westminster Divines were assembled and assigned by parliament to
-    reform the Church of England.
+  - Jim Lauerman
   OriginalLanguage: English
-  SourceAttribution: Public Domain
-  SourceUrl: https://archive.org/details/humbleadviceofas00west/mode/2up
-  Title: Westminster Confession of Faith
-  Year: '1647'
+  Title: Westminster Confession Study Guide
+  Version: 1.0
+  Year: '2024'
 Data:
+- Chapter: 'Introduction'  
+  Sections:
+  - Content: What do Americans believe about God, salvation, ethics, and the Bible?
+      Ligonier Ministries and LifeWay Research partnered to find out. Every two
+      years, they take the theological temperature of the United States to help Christians
+      better understand today's culture and to equip the church with better insights
+      for discipleship.
+    Section: '1'
+  - Content: The trend shown by these studies is depressing. Our culture is increasingly ignorant
+      of fundamental Biblical truth. This will come as no surprise to any follower of
+      Christ, especially those who are from the Reformed tradition.
+    Section: '2'
+  - Content: Why is this so? Many reasons could be given, including the the secular indoctrination
+      of the government school system, the "paganization" of the media (both
+      entertainment and news), and the fact that our lives are increasingly dominated
+      by the political process as the primary means of cultural improvement.
+    Section: '3'
+  - Content: I suspect the deeper cause can be found in the Ligonier survey itself. Those studies
+      show that the decline in Biblical understanding in the broader culture is mirrored
+      by the decline in those calling themselves "Evangelicals." Even within
+      Reformed circles, understanding of the Biblical narrative appears weaker as time
+      passes. 
+    Secton: '4'
+  - Content: So which is the cart and which is the horse? Is the culture leading the church
+      into apostasy, or is the church failing in its mission to lead the culture into
+      truth? 
+    Section: '5'
+  - Content: I believe it is the latter. We are called to be a blessing to the nations, making
+      disciples by teaching them all that Christ commanded (Mt 28:18-20). But how can
+      we do that when we ourselves don't bathe ourselves in the deep truths of
+      God's Word? If we fail in that fundamental calling we will too often simply
+      offer the world its own bromides sprinkled with some Gospel pleasantries.
+    Section: '6'
+  - Content: I have written this study guide to help the student of the Westminster Confession
+      of Faith (WCF) to maintain their focus while wading through its many chapters
+      and sections. The study guide's method is to ask questions to assist the
+      student in answering three basic questions
+    Section: '7'
 - Chapter: '1'
   Sections:
   - Content: Although the light of nature, and the works of creation and providence,
