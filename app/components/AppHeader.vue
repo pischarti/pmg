@@ -1,5 +1,11 @@
 <script setup lang="ts">
+import { useWcf } from '~/composables/useWcf'
+import { ref } from 'vue'
+
+const open = ref(false)
 const route = useRoute()
+// const router = useRouter()
+const { wcf } = await useWcf()
 
 const items = computed(() => [{
   label: 'WCF',
@@ -9,6 +15,16 @@ const items = computed(() => [{
   label: 'Subscribe',
   to: '/pricing'
 }])
+
+const chapterItems = computed(() => (wcf.value?.Data || []).map(ch => ({
+  label: `Chapter ${ch.Chapter}`,
+  to: `/wcf/chapter${ch.Chapter}`,
+  onSelect: () => open.value = false
+})))
+
+// function go(to: string) {
+//   router.push(to)
+// }
 </script>
 
 <template>
@@ -21,14 +37,22 @@ const items = computed(() => [{
         WSC
       </NuxtLink>
 
-      <UDrawer direction="right">
+      <UDrawer
+        v-model:open="open"
+        direction="left"
+        class="lg:hidden"
+      >
         <UButton
           icon="i-lucide-book-open"
           class="lg:hidden"
         />
-
         <template #content>
-          <Placeholder class="min-w-96 min-h-96 size-full m-4" />
+          <UNavigationMenu
+            class="overflow-y-auto"
+            :items="chapterItems"
+            orientation="vertical"
+            variant="link"
+          />
         </template>
       </UDrawer>
     </template>
