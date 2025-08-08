@@ -66,16 +66,5 @@ const items = ref([
         />
       </UPageLogos>
     </UPageSection>
-
-    <UPageSection
-      :title="page.faq.title"
-      :description="page.faq.description"
-    >
-      <UPageAccordion
-        :items="page.faq.items"
-        multiple
-        class="max-w-4xl mx-auto"
-      />
-    </UPageSection>
   </div>
 </template>

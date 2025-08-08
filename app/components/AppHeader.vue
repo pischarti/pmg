@@ -20,6 +20,17 @@ const items = computed(() => [{
       >
         WSC
       </NuxtLink>
+
+      <UDrawer direction="right">
+        <UButton
+          icon="i-lucide-book-open"
+          class="lg:hidden"
+        />
+
+        <template #content>
+          <Placeholder class="min-w-96 min-h-96 size-full m-4" />
+        </template>
+      </UDrawer>
     </template>
 
     <UNavigationMenu
