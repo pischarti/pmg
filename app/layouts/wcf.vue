@@ -41,6 +41,10 @@ const navigation = computed(() => {
     icon: 'i-lucide-gavel',
     chapters: ['19', '20', '21', '22', '23', '24']
      },
+      'Ecclesiology': {
+    icon: 'i-lucide-church',
+    chapters: ['25', '26', '27', '28', '29', '30', '30']
+     },
   }
 
   return Object.entries(categories).map(([title, { icon, chapters }]) => ({
