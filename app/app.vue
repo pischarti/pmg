@@ -18,8 +18,7 @@ useHead({
 })
 
 useSeoMeta({
-  titleTemplate: '%s - Westminster Study Center',
-  ogImage: undefined
+  titleTemplate: 'Westminster Study Center'
 })
 
 const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('docs'), {
