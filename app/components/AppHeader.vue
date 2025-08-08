@@ -42,6 +42,7 @@ const chapterItems = computed(() => (wcf.value?.Data || []).map(ch => ({
         direction="left"
         class="lg:hidden"
         title="Chapters"
+        description="Select a chapter"
       >
         <UButton
           icon="i-lucide-book-open"
