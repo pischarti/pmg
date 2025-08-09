@@ -43,3 +43,10 @@ How to stash changes:
 ```bash
 git stash --include-untracked
 ```
+
+How to lint:
+
+```bash
+pnpm lint
+pnpm lint --fix
+```
