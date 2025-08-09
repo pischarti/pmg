@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useWcf } from '~/composables/useWcf'
+import WcfSection from '~/components/WcfSection.vue'
 
 definePageMeta({
   layout: 'wcf'
@@ -45,15 +46,10 @@ const title = 'Westminster Confession of Faith'
         v-for="(section, index) in chapter.Sections"
         :key="index"
       >
-        <div
-          :id="`section${index + 1}`"
-          class="scroll-mt-[calc(48px+var(--ui-header-height))]"
-        >
-          <h2 class="text-2xl font-bold text-highlighted mt-8 mb-4">
-            Section {{ index + 1 }}
-          </h2>
-          {{ section.Content }}
-        </div>
+        <WcfSection
+          :section="section"
+          :index="index"
+        />
         <USeparator v-if="index < chapter.Sections.length - 1" />
       </template>
     </UPageBody>
