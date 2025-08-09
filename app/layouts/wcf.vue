@@ -22,16 +22,32 @@ const navigation = computed(() => {
       chapters: []
     },
     'Epistemology': {
-      icon: 'i-lucide-book-open',
+      icon: 'i-lucide-brain',
       chapters: ['1']
     },
     'Theology Proper': {
-      icon: 'i-lucide-database',
+      icon: 'i-lucide-flame',
       chapters: ['2', '3', '4', '5']
     },
     'Anthropology': {
       icon: 'i-lucide-user',
-      chapters: ['6', '7', '8', '9']
+      chapters: ['6']
+    },
+    'Soteriology': {
+      icon: 'i-lucide-cross',
+      chapters: ['7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18']
+    },
+    'Theonomy': {
+      icon: 'i-lucide-gavel',
+      chapters: ['19', '20', '21', '22', '23', '24']
+    },
+    'Ecclesiology': {
+      icon: 'i-lucide-church',
+      chapters: ['25', '26', '27', '28', '29', '30', '30']
+    },
+    'Eschatology': {
+      icon: 'i-lucide-scale',
+      chapters: ['31', '32']
     }
   }
 
