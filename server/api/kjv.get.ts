@@ -1,6 +1,7 @@
 import { defineEventHandler, getQuery } from 'h3'
 import { readFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
+import yaml from 'js-yaml'
 
 type Bible = Record<string, Record<string, Record<string, string>>>
 
@@ -8,9 +9,9 @@ let kjvCache: Bible | null = null
 
 async function loadKjv(): Promise<Bible> {
   if (kjvCache) return kjvCache
-  const filePath = resolve(process.cwd(), 'content', 'KJV_bible.json')
+  const filePath = resolve(process.cwd(), 'content', 'KJV_bible.yml')
   const raw = await readFile(filePath, 'utf-8')
-  kjvCache = JSON.parse(raw) as Bible
+  kjvCache = yaml.load(raw) as Bible
   return kjvCache
 }
 
