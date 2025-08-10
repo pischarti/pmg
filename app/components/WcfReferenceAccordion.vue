@@ -14,7 +14,12 @@ const getBibleVerses = async (reference: string): Promise<string> => {
 
     if (response.verses && Array.isArray(response.verses)) {
       return response.verses
-        .map((verse: { ref: string, text: string }) => `${verse.ref}: ${verse.text}`)
+        .map((verse: { ref: string, text: string }) => {
+          // Extract verse number from reference (e.g., "Psalms 19:7" -> "7")
+          const verseMatch = verse.ref.match(/:(\d+)$/)
+          const verseNumber = verseMatch ? verseMatch[1] : '?'
+          return `[${verseNumber}] ${verse.text}`
+        })
         .join('\n\n')
     }
 
