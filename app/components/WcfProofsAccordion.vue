@@ -19,6 +19,13 @@ const proofItems = computed<AccordionItem[]>(() =>
     label: `[${p.Id}] ${p.References.join(', ')}`
   }))
 )
+
+const bRefText = (bText: string): AccordionItem[] => [
+  {
+    label: `${bText}`,
+    content: `${bText}`
+  }
+]
 </script>
 
 <template>
@@ -34,7 +41,9 @@ const proofItems = computed<AccordionItem[]>(() =>
             v-for="ref in (sortedProofs[index]?.References || [])"
             :key="ref"
           >
-            {{ ref }}
+            <UAccordion
+              :items="bRefText(ref)"
+            />
           </li>
         </ul>
       </template>
