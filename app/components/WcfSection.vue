@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { AccordionItem } from '@nuxt/ui'
+import WcfProofsAccordion from '~/components/WcfProofsAccordion.vue'
 
 const items: AccordionItem[] = [
   {
@@ -26,15 +27,7 @@ const props = defineProps<{
 }>()
 
 const sectionId = computed(() => `section${props.index + 1}`)
-const sortedProofs = computed(() => {
-  const list = props.proofs ?? []
-  return [...list].sort((a, b) => a.Id - b.Id)
-})
-const proofItems = computed<AccordionItem[]>(() =>
-  sortedProofs.value.map(p => ({
-    label: `[${p.Id}]`
-  }))
-)
+const hasProofs = computed(() => (props.proofs?.length ?? 0) > 0)
 </script>
 
 <template>
@@ -49,23 +42,10 @@ const proofItems = computed<AccordionItem[]>(() =>
     <UAccordion :items="items">
       <template #content="{ item }">
         <div v-if="item.label === 'Proofs'">
-          <div v-if="sortedProofs.length">
-            <UAccordion
-              :items="proofItems"
-              class="pl-6 sm:pl-8"
-            >
-              <template #content="{ index: proofIndex }">
-                <ul class="list-disc pl-6 space-y-1 text-sm text-muted">
-                  <li
-                    v-for="ref in (sortedProofs[proofIndex]?.References || [])"
-                    :key="ref"
-                  >
-                    {{ ref }}
-                  </li>
-                </ul>
-              </template>
-            </UAccordion>
-          </div>
+          <WcfProofsAccordion
+            v-if="hasProofs"
+            :proofs="proofs"
+          />
           <p
             v-else
             class="pb-3.5 text-sm text-muted"
