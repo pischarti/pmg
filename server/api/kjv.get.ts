@@ -80,8 +80,15 @@ function collectVerses(bible: Bible, start: RefPoint, end?: RefPoint): { ref: st
     if (!chapterObj) continue
     const verses = Object.keys(chapterObj).map(n => Number(n)).sort((a, b) => a - b)
     if (!verses.length) continue
-    const from = ch === start.chapter ? start.verse : verses[0]
-    const to = ch === endPoint.chapter ? endPoint.verse : verses[verses.length - 1]
+
+    // Ensure we have valid verse numbers
+    const firstVerse = verses[0]
+    const lastVerse = verses[verses.length - 1]
+    if (firstVerse === undefined || lastVerse === undefined) continue
+
+    const from = ch === start.chapter ? start.verse : firstVerse
+    const to = ch === endPoint.chapter ? endPoint.verse : lastVerse
+
     for (let v = from; v <= to; v++) {
       const text = chapterObj[String(v)]
       if (text) results.push({ ref: `${book} ${ch}:${v}`, text })
@@ -98,7 +105,14 @@ export default defineEventHandler(async (event) => {
   }
 
   const bible = await loadKjv()
-  const [rawStart, rawEnd] = q.split('-')
+  const parts = q.split('-')
+  const rawStart = parts[0]
+  const rawEnd = parts[1]
+
+  if (!rawStart) {
+    return { error: 'Invalid reference format' }
+  }
+
   const start = parsePoint(rawStart)
   const end = rawEnd ? parsePoint(rawEnd) : undefined
 
