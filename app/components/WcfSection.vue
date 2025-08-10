@@ -50,7 +50,10 @@ const proofItems = computed<AccordionItem[]>(() =>
       <template #content="{ item }">
         <div v-if="item.label === 'Proofs'">
           <div v-if="sortedProofs.length">
-            <UAccordion :items="proofItems">
+            <UAccordion
+              :items="proofItems"
+              class="pl-6 sm:pl-8"
+            >
               <template #content="{ index: proofIndex }">
                 <ul class="list-disc pl-6 space-y-1 text-sm text-muted">
                   <li
