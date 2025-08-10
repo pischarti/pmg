@@ -16,7 +16,7 @@ const sortedProofs = computed(() => {
 
 const proofItems = computed<AccordionItem[]>(() =>
   sortedProofs.value.map(p => ({
-    label: `[${p.Id}]`
+    label: `[${p.Id}] ${p.References.join(', ')}`
   }))
 )
 </script>
