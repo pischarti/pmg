@@ -30,6 +30,11 @@ const sortedProofs = computed(() => {
   const list = props.proofs ?? []
   return [...list].sort((a, b) => a.Id - b.Id)
 })
+const proofItems = computed<AccordionItem[]>(() =>
+  sortedProofs.value.map(p => ({
+    label: `[${p.Id}]`
+  }))
+)
 </script>
 
 <template>
@@ -44,18 +49,19 @@ const sortedProofs = computed(() => {
     <UAccordion :items="items">
       <template #content="{ item }">
         <div v-if="item.label === 'Proofs'">
-          <div v-if="proofs?.length">
-            <ul class="list-disc pl-6 space-y-1 text-sm text-muted">
-              <li
-                v-for="proof in sortedProofs"
-                :key="proof.Id"
-              >
-                <span class="font-medium">[{{ proof.Id }}]: </span>
-                <span>
-                  {{ proof.References.join(', ') }}
-                </span>
-              </li>
-            </ul>
+          <div v-if="sortedProofs.length">
+            <UAccordion :items="proofItems">
+              <template #content="{ index: proofIndex }">
+                <ul class="list-disc pl-6 space-y-1 text-sm text-muted">
+                  <li
+                    v-for="ref in (sortedProofs[proofIndex]?.References || [])"
+                    :key="ref"
+                  >
+                    {{ ref }}
+                  </li>
+                </ul>
+              </template>
+            </UAccordion>
           </div>
           <p
             v-else
