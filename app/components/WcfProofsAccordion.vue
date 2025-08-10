@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { AccordionItem } from '@nuxt/ui'
+import WcfReferenceAccordion from '~/components/WcfReferenceAccordion.vue'
 
 const props = defineProps<{
   proofs?: Array<{
@@ -19,13 +20,6 @@ const proofItems = computed<AccordionItem[]>(() =>
     label: `[${p.Id}] ${p.References.join(', ')}`
   }))
 )
-
-const bRefText = (bText: string): AccordionItem[] => [
-  {
-    label: `${bText}`,
-    content: `${bText}`
-  }
-]
 </script>
 
 <template>
@@ -41,9 +35,7 @@ const bRefText = (bText: string): AccordionItem[] => [
             v-for="ref in (sortedProofs[index]?.References || [])"
             :key="ref"
           >
-            <UAccordion
-              :items="bRefText(ref)"
-            />
+            <WcfReferenceAccordion :reference="ref" />
           </li>
         </ul>
       </template>
