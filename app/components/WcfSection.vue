@@ -1,5 +1,13 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import type { AccordionItem } from '@nuxt/ui'
+
+const items: AccordionItem[] = [
+  {
+    label: 'Proofs',
+    icon: 'i-lucide-book-open'
+  }
+]
 
 const props = defineProps<{
   index: number
@@ -21,5 +29,12 @@ const sectionId = computed(() => `section${props.index + 1}`)
       Section {{ index + 1 }}
     </h2>
     {{ section.Content }}
+    <UAccordion :items="items">
+      <template #content="{ item }">
+        <p class="pb-3.5 text-sm text-muted">
+          This is the {{ item.label }} panel.
+        </p>
+      </template>
+    </UAccordion>
   </div>
 </template>
