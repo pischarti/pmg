@@ -26,6 +26,10 @@ const props = defineProps<{
 }>()
 
 const sectionId = computed(() => `section${props.index + 1}`)
+const sortedProofs = computed(() => {
+  const list = props.proofs ?? []
+  return [...list].sort((a, b) => a.Id - b.Id)
+})
 </script>
 
 <template>
@@ -43,7 +47,7 @@ const sectionId = computed(() => `section${props.index + 1}`)
           <div v-if="proofs?.length">
             <ul class="list-disc pl-6 space-y-1 text-sm text-muted">
               <li
-                v-for="proof in proofs"
+                v-for="proof in sortedProofs"
                 :key="proof.Id"
               >
                 <span class="font-medium">[{{ proof.Id }}]: </span>
