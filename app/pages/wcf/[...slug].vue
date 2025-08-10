@@ -49,6 +49,7 @@ const title = 'Westminster Confession of Faith'
         <WcfSection
           :section="section"
           :index="index"
+          :proofs="section.Proofs"
         />
         <USeparator v-if="index < chapter.Sections.length - 1" />
       </template>
