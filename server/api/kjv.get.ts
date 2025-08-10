@@ -16,24 +16,28 @@ async function loadKjv(): Promise<Bible> {
 
 const bookMap: Record<string, string> = {
   // OT
-  Gen: 'Genesis', Exod: 'Exodus', Lev: 'Leviticus', Num: 'Numbers', Deut: 'Deuteronomy',
-  Josh: 'Joshua', Judg: 'Judges', Ruth: 'Ruth', '1Sam': '1 Samuel', '2Sam': '2 Samuel',
+  'Gen': 'Genesis', 'Exod': 'Exodus', 'Lev': 'Leviticus', 'Num': 'Numbers', 'Deut': 'Deuteronomy',
+  'Josh': 'Joshua', 'Judg': 'Judges', 'Ruth': 'Ruth', '1Sam': '1 Samuel', '2Sam': '2 Samuel',
   '1Kgs': '1 Kings', '2Kgs': '2 Kings', '1Chr': '1 Chronicles', '2Chr': '2 Chronicles',
-  Ezra: 'Ezra', Neh: 'Nehemiah', Esth: 'Esther', Job: 'Job', Ps: 'Psalms', Prov: 'Proverbs',
-  Eccl: 'Ecclesiastes', Song: 'Song of Solomon', Isa: 'Isaiah', Jer: 'Jeremiah', Lam: 'Lamentations',
-  Ezek: 'Ezekiel', Dan: 'Daniel', Hos: 'Hosea', Joel: 'Joel', Amos: 'Amos', Obad: 'Obadiah',
-  Jonah: 'Jonah', Mic: 'Micah', Nah: 'Nahum', Hab: 'Habakkuk', Zeph: 'Zephaniah', Hag: 'Haggai',
-  Zech: 'Zechariah', Mal: 'Malachi',
+  'Ezra': 'Ezra', 'Neh': 'Nehemiah', 'Esth': 'Esther', 'Job': 'Job', 'Ps': 'Psalms', 'Prov': 'Proverbs',
+  'Eccl': 'Ecclesiastes', 'Song': 'Song of Solomon', 'Isa': 'Isaiah', 'Jer': 'Jeremiah', 'Lam': 'Lamentations',
+  'Ezek': 'Ezekiel', 'Dan': 'Daniel', 'Hos': 'Hosea', 'Joel': 'Joel', 'Amos': 'Amos', 'Obad': 'Obadiah',
+  'Jonah': 'Jonah', 'Mic': 'Micah', 'Nah': 'Nahum', 'Hab': 'Habakkuk', 'Zeph': 'Zephaniah', 'Hag': 'Haggai',
+  'Zech': 'Zechariah', 'Mal': 'Malachi',
   // NT
-  Matt: 'Matthew', Mark: 'Mark', Luke: 'Luke', John: 'John', Acts: 'Acts', Rom: 'Romans',
-  '1Cor': '1 Corinthians', '2Cor': '2 Corinthians', Gal: 'Galatians', Eph: 'Ephesians',
-  Phil: 'Philippians', Col: 'Colossians', '1Thess': '1 Thessalonians', '2Thess': '2 Thessalonians',
-  '1Tim': '1 Timothy', '2Tim': '2 Timothy', Titus: 'Titus', Phlm: 'Philemon', Heb: 'Hebrews',
-  Jas: 'James', '1Pet': '1 Peter', '2Pet': '2 Peter', '1John': '1 John', '2John': '2 John',
-  '3John': '3 John', Jude: 'Jude', Rev: 'Revelation'
+  'Matt': 'Matthew', 'Mark': 'Mark', 'Luke': 'Luke', 'John': 'John', 'Acts': 'Acts', 'Rom': 'Romans',
+  '1Cor': '1 Corinthians', '2Cor': '2 Corinthians', 'Gal': 'Galatians', 'Eph': 'Ephesians',
+  'Phil': 'Philippians', 'Col': 'Colossians', '1Thess': '1 Thessalonians', '2Thess': '2 Thessalonians',
+  '1Tim': '1 Timothy', '2Tim': '2 Timothy', 'Titus': 'Titus', 'Phlm': 'Philemon', 'Heb': 'Hebrews',
+  'Jas': 'James', '1Pet': '1 Peter', '2Pet': '2 Peter', '1John': '1 John', '2John': '2 John',
+  '3John': '3 John', 'Jude': 'Jude', 'Rev': 'Revelation'
 }
 
-interface RefPoint { book: string; chapter: number; verse: number }
+interface RefPoint {
+  book: string
+  chapter: number
+  verse: number
+}
 
 function parsePoint(point: string): RefPoint | null {
   // Examples: Ps.19.1  Rom.1.20  1Cor.2.13
@@ -48,8 +52,8 @@ function parsePoint(point: string): RefPoint | null {
   return { book, chapter, verse }
 }
 
-function collectVerses(bible: Bible, start: RefPoint, end?: RefPoint): { ref: string; text: string }[] {
-  const results: { ref: string; text: string }[] = []
+function collectVerses(bible: Bible, start: RefPoint, end?: RefPoint): { ref: string, text: string }[] {
+  const results: { ref: string, text: string }[] = []
   const endPoint = end ?? start
 
   if (start.book !== endPoint.book) {
@@ -74,7 +78,7 @@ function collectVerses(bible: Bible, start: RefPoint, end?: RefPoint): { ref: st
   for (let ch = start.chapter; ch <= endPoint.chapter; ch++) {
     const chapterObj = bible[book]?.[String(ch)]
     if (!chapterObj) continue
-    const verses = Object.keys(chapterObj).map(n => Number(n)).sort((a,b)=>a-b)
+    const verses = Object.keys(chapterObj).map(n => Number(n)).sort((a, b) => a - b)
     if (!verses.length) continue
     const from = ch === start.chapter ? start.verse : verses[0]
     const to = ch === endPoint.chapter ? endPoint.verse : verses[verses.length - 1]
@@ -102,6 +106,6 @@ export default defineEventHandler(async (event) => {
     return { error: 'Invalid reference format' }
   }
 
-  const verses = collectVerses(bible, start, end)
+  const verses = collectVerses(bible, start, end!)
   return { verses }
 })
