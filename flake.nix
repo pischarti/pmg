@@ -39,6 +39,7 @@
               jq
               git
               gh
+              code-cursor
             ];
           };
         });
