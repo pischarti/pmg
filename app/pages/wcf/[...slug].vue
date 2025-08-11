@@ -17,7 +17,7 @@ const chapter = computed(() => {
 })
 
 const heroTitle = computed(() => {
-  if (chapter.value) return chapter.value.Title
+  if (chapter.value) return `${chapter.value.Chapter}. ${chapter.value.Title}`
   if (_route.path === '/wcf' || _route.path === '/wcf/introduction') {
     return wcf.value?.Metadata?.OriginStory || ''
   }
