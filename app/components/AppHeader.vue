@@ -86,6 +86,7 @@ const nextChapter = computed(() =>
       </UDrawer>
 
       <UButton
+        v-if="route.path.startsWith('/wcf')"
         icon="i-lucide-chevron-left"
         :to="prevChapter ? `/wcf/chapter${prevChapter}` : undefined"
         :disabled="!prevChapter"
@@ -95,6 +96,7 @@ const nextChapter = computed(() =>
       />
 
       <UButton
+        v-if="route.path.startsWith('/wcf')"
         icon="i-lucide-chevron-right"
         :to="nextChapter ? `/wcf/chapter${nextChapter}` : undefined"
         :disabled="!nextChapter"
