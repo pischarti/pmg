@@ -24,6 +24,17 @@ useSeoMeta({
 
         <LazyStarsBg />
       </template>
+
+      <template
+        v-if="page.hero?.links"
+        #links
+      >
+        <UButton
+          v-for="(link, index) in page.hero.links"
+          :key="index"
+          v-bind="link"
+        />
+      </template>
     </UPageHero>
 
     <USeparator />

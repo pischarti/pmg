@@ -6,19 +6,11 @@ seo:
 navigation: false
 hero:
   links:
-    - label: Start Learning!
-      icon: i-lucide-arrow-right
+    - label: Start Reading
+      icon: i-lucide-book-open
       trailing: true
-      to: https://ui.nuxt.com/getting-started/installation/pro/nuxt
-      target: _blank
+      to: /wcf/chapter1
       size: xl
-    - label: See the Scoreboard
-      icon: i-lucide-medal
-      size: xl
-      color: neutral
-      variant: subtle
-      to: https://github.com/nuxt-ui-pro/saas
-      target: _blank
 sections:
   - title: Why is the Westminster Confession of Faith important?
     description: See how the Westminster Confession of Faith has shaped Reformed theology and practice.
