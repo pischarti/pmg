@@ -64,23 +64,23 @@ Data:
       - 4.What makes the Bible necessary?
       - 5.What can man learn from creation (natural revelation)?
       - 6.What can man not learn from creation (requiring special revelation)?
-    Section: '1.1'
+    Section: '1'
   - Content: 
       - 1.What are the books of the Bible and how are they subdivided?
       - 2.What does it mean that these books are to be the rule of faith and life?
       - 3.Is there any value in reading the Apocrypha?
-    Section: '1.2 and 1.3'
+    Section: '2 and 3'
   - Content: 
       - 1.On what does the authority of the Bible depend?
       - 2.Do Roman Catholics agree with this section of the WCF? Why or why not? 
       - 3.This section describes the doctrine of Sola Scriptura. Put that doctrine into your own words.
       - 4.An old saying goes, "God said it, I believe it, that settles it." Do you agree with this saying? Why or why not?"
-    Section: '1.4'
+    Section: '4'
   - Content: 
       - 1.How does Scripture evidence itself to be the word of God?
       - 2.Is the testimony of the church su\uFB03cient to convince a person of the truth of the Bible?"
       - 3.Can we convince someone of the "infallible truth and divine authority" of the Bible through our winsome ways and intellectual prowess? What else is required?
-    Section: '1.5'
+    Section: '5'
   - Content: 
       - 1.Where do we find everything we need to know about God and our relationship to Him?"
       - 2.Are "all things necessary for His own glory, man's salvation, faith, and life" expressly set down in Scripture?
@@ -89,25 +89,25 @@ Data:
       - 5.What role does human tradition play in interpreting the Scriptures? Does human tradition have any value?
       - 6.Does the "Book of Church Order" (BCO) hold the authority of Scripture? What is it used for then?
       - 7.Does the BCO need to follow the "general rules of the Word"?
-    Section: '1.6'
+    Section: '6'
   - Content: 
       - 1.Is everything in the Bible easy to understand?
       - 2.Is it necessary to have a Master's of Divinity degree in order to truly know what is necessary for salvation?"
-    Section: '1.7'
+    Section: '7'
   - Content: 
       - 1.How do we know that the Bible is authentic?
       - 2.Where should the church look to resolve "controversies of religion"?
       - 3.What should we do if we don't read Hebrew and Greek?"
       - 4.Why should we translate the Bible into the language of every nation?
-    Section: '1.8'
+    Section: '8'
   - Content: 
       - 1.What is the infallible rule of interpretation of Scripture?
       - 2.When there is a question about the true and full sense of any Scripture, where can we find the best commentary?
-    Section: '1.9'
+    Section: '9'
   - Content: 
       - 1.What is the supreme authority for the church?
       - 2.Who wrote the Scriptures?
-    Section: '1.10'
+    Section: '10'
   Title: Of the Holy Scripture
 - Chapter: '2'
   Sections:
@@ -119,7 +119,7 @@ Data:
       - 5.What are God's "popular" attributes?
       - 6.Which attributes of God are much less popular?
       - 7.Should we gloss over God's judgement and hatred of sin when communicating the gospel? Why or why not?"
-    Section: '2.1'
+    Section: '1'
   - Content: 
       - 1.Who does God rely upon?
       - 2.Does creation add to or subtract from God's glory?"
@@ -129,1209 +129,273 @@ Data:
       - 6.If God is sovereign and holy in all his counsels, works, and commands, how do we explain the existence of evil?
       - 7.What do we owe to God?
       - 8.What does God owe us?
-    Section: '2.2'
+    Section: '2'
   - Content: 
       - 1.Describe the Trinity in your own words.
       - 2.What are the relationships within the Godhead?
-    Section: '2.3'
+    Section: '3'
   Title: Of God, and of the Holy Trinity
 - Chapter: '3'
   Sections:
-  - Content: God from all eternity did, by the most wise and holy counsel of his own
-      will, freely and unchangeably ordain whatsoever comes to pass; yet so as thereby
-      neither is God the author of sin, nor is violence offered to the will of the
-      creatures, nor is the liberty or contingency of second causes taken away, but
-      rather established.
-    ContentWithProofs: God from all eternity did, by the most wise and holy counsel
-      of his own will, freely and unchangeably ordain whatsoever comes to pass;[1]
-      yet so as thereby neither is God the author of sin,[2] nor is violence offered
-      to the will of the creatures, nor is the liberty or contingency of second causes
-      taken away, but rather established.[3]
-    Proofs:
-    - Id: 1
-      References:
-      - Rom.9.15
-      - Rom.9.18
-      - Rom.11.33
-      - Eph.1.11
-      - Heb.6.17
-    - Id: 3
-      References:
-      - Prov.16.33
-      - Matt.17.12
-      - John.19.11
-      - Acts.2.23
-      - Acts.4.27-Acts.4.28
-    - Id: 2
-      References:
-      - Jas.1.13
-      - Jas.1.17
-      - 1John.1.5
+  - Content: 
+    - 1.Who freely and unchangeably ordains whatsoever comes to pass?
+    - 2.How long has God been ordaining whatsoever comes to pass?
+    - 3.If God ordains all things, is he the author of sin?
+    - 4.If God ordains all things, do people have free will?
+    - 5.Give an example from Scripture where God brought good out of evil.
+    - 6.Are our lives exposed to the blind forces of chance or fate?
     Section: '1'
-  - Content: Although God knows whatsoever may or can come to pass upon all supposed
-      conditions, yet hath he not decreed anything because he foresaw it as future,
-      or as that which would come to pass upon such conditions.
-    ContentWithProofs: Although God knows whatsoever may or can come to pass upon
-      all supposed conditions,[1] yet hath he not decreed anything because he foresaw
-      it as future, or as that which would come to pass upon such conditions.[2]
-    Proofs:
-    - Id: 1
-      References:
-      - 1Sam.23.11-1Sam.23.12
-      - Matt.11.21
-      - Matt.11.23
-      - Acts.15.18
-    - Id: 2
-      References:
-      - Rom.9.11
-      - Rom.9.13
-      - Rom.9.16
-      - Rom.9.18
+  - Content: 
+    - 1.How does God know all things in advance?
+    - 2.Why do some people respond to the gospel and some do not?
     Section: '2'
-  - Content: By the decree of God, for the manifestation of his glory, some men and
-      angels are predestinated unto everlasting life, and others fore-ordained to
-      everlasting death.
-    ContentWithProofs: By the decree of God, for the manifestation of his glory, some
-      men and angels[1] are predestinated unto everlasting life, and others fore-ordained
-      to everlasting death.[2]
-    Proofs:
-    - Id: 1
-      References:
-      - Matt.25.41
-      - 1Tim.5.21
-    - Id: 2
-      References:
-      - Prov.16.4
-      - Rom.9.22-Rom.9.23
-      - Eph.1.5-Eph.1.6
+  - Content: 
+    - 1.Why does God predestine some men and angels to everlasting life while others are
+      foreordained to everlasting death?
+    - 2.How can people who perish in hell add to the glory of God?
+    - 3.Which glorifies God more - predestining some to everlasting life or foreordaining others to everlasting death?
     Section: '3'
-  - Content: These angels and men, thus predestinated and fore-ordained, are particularly
-      and unchangeably designed; and their number is so certain and definite that
-      it can not be either increased or diminished.
-    ContentWithProofs: These angels and men, thus predestinated and fore-ordained,
-      are particularly and unchangeably designed; and their number is so certain and
-      definite that it can not be either increased or diminished.[1]
-    Proofs:
-    - Id: 1
-      References:
-      - John.13.18
-      - 2Tim.2.19
+  - Content: 
+    - 1.How can we increase the number of those preordained to eternal life?
+    - 2.In his "High Priestly Prayer," who was Jesus praying for? (John 17:9)
+    - 3.Is the final state of the church in our hands?
     Section: '4'
-  - Content: Those of mankind that are predestinated unto life, God, before the foundation
-      of the world was laid, according to his eternal and immutable purpose, and the
-      secret counsel and good pleasure of his will, hath chosen in Christ, unto everlasting
-      glory, out of his mere free grace and love, without any foresight of faith or
-      good works, or perseverance in either of them, or any other thing in the creature,
-      as conditions, or causes moving him thereunto; and all to the praise of his
-      glorious grace.
-    ContentWithProofs: Those of mankind that are predestinated unto life, God, before
-      the foundation of the world was laid, according to his eternal and immutable
-      purpose, and the secret counsel and good pleasure of his will, hath chosen in
-      Christ, unto everlasting glory,[1] out of his mere free grace and love, without
-      any foresight of faith or good works, or perseverance in either of them, or
-      any other thing in the creature, as conditions, or causes moving him thereunto;[2]
-      and all to the praise of his glorious grace.[3]
-    Proofs:
-    - Id: 1
-      References:
-      - Rom.8.30
-      - Eph.1.4
-      - Eph.1.9
-      - Eph.1.11
-      - 1Thess.5.9
-      - 2Tim.1.9
-    - Id: 3
-      References:
-      - Eph.1.6
-      - Eph.1.12
-    - Id: 2
-      References:
-      - Rom.9.11
-      - Rom.9.13
-      - Rom.9.16
-      - Eph.1.4
-      - Eph.1.9
+  - Content: 
+    - 1.When did God predestine those who were elect?
+    - 2.What means did God use to bring the elect into everlasting glory?
+    - 3.What godly attribute cause Him to elect some to everlasting glory? (Sola gratia}
+    - 4.Did God look down the corridors of time to see who would respond to the gospel so that He would know who to elect? (Sola Deo gloria}
+    - 5.In light of the doctrine of predestination, should we pray for someone's salvation? Why or why not?"
     Section: '5'
-  - Content: As God hath appointed the elect unto glory, so hath he, by the eternal
-      and most free purpose of his will, fore-ordained all the means thereunto. Wherefore
-      they who are elected, being fallen in Adam, are redeemed by Christ, are effectually
-      called unto faith in Christ by his Spirit working in due season; are justified,
-      adopted, sanctified, and kept by his power through faith unto salvation. Neither
-      are any other redeemed by Christ, effectually called, justified, adopted, sanctified,
-      and saved, but the elect only.
-    ContentWithProofs: As God hath appointed the elect unto glory, so hath he, by
-      the eternal and most free purpose of his will, fore-ordained all the means thereunto.[1]
-      Wherefore they who are elected, being fallen in Adam, are redeemed by Christ,[2]
-      are effectually called unto faith in Christ by his Spirit working in due season;
-      are justified, adopted, sanctified,[3] and kept by his power through faith unto
-      salvation.[4] Neither are any other redeemed by Christ, effectually called,
-      justified, adopted, sanctified, and saved, but the elect only.[5]
-    Proofs:
-    - Id: 1
-      References:
-      - Eph.1.4-Eph.1.5
-      - Eph.2.10
-      - 2Thess.2.13
-      - 1Pet.1.2
-    - Id: 3
-      References:
-      - Rom.8.30
-      - Eph.1.5
-      - 2Thess.2.13
-    - Id: 2
-      References:
-      - 1Thess.5.9-1Thess.5.10
-      - Titus.2.14
-    - Id: 5
-      References:
-      - John.6.64-John.6.65
-      - John.8.47
-      - John.10.26
-      - John.17.9
-      - Rom.8.28-Rom.8.39
-      - 1John.2.19
-    - Id: 4
-      References:
-      - 1Pet.1.5
+  - Content: 
+    - 1.What means does God use to bring the elect into glory? (Ordo salutis)
+    - 2.Place the following means in their logical order - Faith, glorification, election, foreknowledge, regeneration, repentance, effectual call, justification, sanctification.
+    - 3.Besides the elect, who else is saved?
     Section: '6'
-  - Content: The rest of mankind God was pleased, according to the unsearchable counsel
-      of his own will, whereby he extendeth or withholdeth mercy as he pleaseth, for
-      the glory of his sovereign power over his creatures, to pass by, and to ordain
-      them to dishonor and wrath for their sin, to the praise of his glorious justice.
-    ContentWithProofs: The rest of mankind God was pleased, according to the unsearchable
-      counsel of his own will, whereby he extendeth or withholdeth mercy as he pleaseth,
-      for the glory of his sovereign power over his creatures, to pass by, and to
-      ordain them to dishonor and wrath for their sin, to the praise of his glorious
-      justice.[1]
-    Proofs:
-    - Id: 1
-      References:
-      - Matt.11.25-Matt.11.26
-      - Rom.9.17-Rom.9.18
-      - Rom.9.21-Rom.9.22
-      - 2Tim.2.19-2Tim.2.20
-      - 1Pet.2.8
-      - Jude.1.4
+  - Content: 
+    - 1.In the case of the elect, God extends ________. In the case of the reprobate, God does not extend ________.
+    - 2.Is that fair?
+    - 3.Unto what does God ordain the reprobate?
+    - 4.What attribute of God is manifest in his passing by the reprobate?
+    - 5.What is your response to this section? Reflect on your response.
+    - 6.What are the elect saved from?
     Section: '7'
-  - Content: The doctrine of this high mystery of predestination is to be handled
-      with special prudence and care, that men attending the will of God revealed
-      in his Word, and yielding obedience thereunto, may, from the certainty of their
-      effectual vocation, be assured of their eternal election. So shall this doctrine
-      afford matter of praise, reverence, and admiration of God; and of humility,
-      diligence, and abundant consolation to all that sincerely obey the gospel.
-    ContentWithProofs: The doctrine of this high mystery of predestination is to be
-      handled with special prudence and care,[1] that men attending the will of God
-      revealed in his Word, and yielding obedience thereunto, may, from the certainty
-      of their effectual vocation, be assured of their eternal election.[2] So shall
-      this doctrine afford matter of praise, reverence, and admiration of God;[3]
-      and of humility, diligence, and abundant consolation to all that sincerely obey
-      the gospel.[4]
-    Proofs:
-    - Id: 1
-      References:
-      - Deut.29.29
-      - Rom.9.20
-    - Id: 3
-      References:
-      - Rom.11.33
-      - Eph.1.6
-    - Id: 2
-      References:
-      - 2Pet.1.10
-    - Id: 4
-      References:
-      - Luke.10.20
-      - Rom.8.33
-      - Rom.11.5-Rom.11.6
-      - Rom.11.20
-      - 2Pet.1.10
+  - Content: 
+    - 1.How does the doctrine of predestination lead to assurance for the Christian?
+    - 2.What can we do to be assured of our eternal election?
+    - 3.What attitudes should the doctrine of predestination bring in us?
+    - 4.How can we "obey the gospel?"
     Section: '8'
   Title: Of God's Eternal Decree
 - Chapter: '4'
   Sections:
-  - Content: It pleased God the Father, Son, and Holy Ghost, for the manifestation
-      of the glory of his eternal power, wisdom, and goodness, in the beginning, to
-      create or make of nothing the world, and all things therein, whether visible
-      or invisible, in the space of six days, and all very good.
-    ContentWithProofs: It pleased God the Father, Son, and Holy Ghost,[1] for the
-      manifestation of the glory of his eternal power, wisdom, and goodness,[2] in
-      the beginning, to create or make of nothing the world, and all things therein,
-      whether visible or invisible, in the space of six days, and all very good.[3]
-    Proofs:
-    - Id: 1
-      References:
-      - Gen.1.2
-      - Job.26.13
-      - Job.33.4
-      - John.1.2-John.1.3
-      - Heb.1.2
-    - Id: 3
-      References:
-      - Gen.1
-      - Acts.17.24
-      - Col.1.16
-      - Heb.11.3
-    - Id: 2
-      References:
-      - Ps.33.5-Ps.33.6
-      - Ps.104.24
-      - Jer.10.12
-      - Rom.1.20
+  - Content: 
+    - 1.Which of the three persons of the Godhead participated in creation?
+    - 2.Why did God create the world?
+    - 3.How long did it take for God to create the world?
+    - 4.Was there evil in the world when God created it?
+    - 5.By what means did God accomplish the feat of creation ex nihilo (out of nothing)?
+    - 6.Did anything exist before creation?
     Section: '1'
-  - Content: After God had made all other creatures, he created man, male and female,
-      with reasonable and immortal souls, endued with knowledge, righteousness, and
-      true holiness, after his own image, having the law of God written in their hearts,
-      and power to fulfil it; and yet under a possibility of transgressing, being
-      left to the liberty of their own will, which was subject unto change. Beside
-      this law written in their hearts, they received a command not to eat of the
-      tree of the knowledge of good and evil; which while they kept they were happy
-      in their communion with God, and had dominion over the creatures.
-    ContentWithProofs: After God had made all other creatures, he created man, male
-      and female,[1] with reasonable and immortal souls,[2] endued with knowledge,
-      righteousness, and true holiness, after his own image,[3] having the law of
-      God written in their hearts,[4] and power to fulfil it;[5] and yet under a possibility
-      of transgressing, being left to the liberty of their own will, which was subject
-      unto change.[6] Beside this law written in their hearts, they received a command
-      not to eat of the tree of the knowledge of good and evil;[7] which while they
-      kept they were happy in their communion with God, and had dominion over the
-      creatures.[8]
-    Proofs:
-    - Id: 1
-      References:
-      - Gen.1.27
-    - Id: 3
-      References:
-      - Gen.1.26
-      - Eph.4.24
-      - Col.3.10
-    - Id: 2
-      References:
-      - Gen.2.7
-      - Eccl.12.7
-      - Matt.10.28
-      - Luke.23.43
-    - Id: 5
-      References:
-      - Eccl.7.29
-    - Id: 4
-      References:
-      - Rom.2.14-Rom.2.15
-    - Id: 7
-      References:
-      - Gen.2.17
-      - Gen.3.8-Gen.3.11
-      - Gen.3.23
-    - Id: 6
-      References:
-      - Gen.3.6
-      - Eccl.7.29
-    - Id: 8
-      References:
-      - Gen.1.26
-      - Gen.1.28
+  - Content: 
+    - 1.What was God's final, crowning act of creation?
+    - 2.How many genders did God create?
+    - 3.What kind of souls did God give man?
+    - 4.What does it mean that God created man "after His own image"?
+    - 5.Did man, before the fall, need to be taught the law of God?
+    - 6.Was Adam capable of fulfilling the law of God?
+    - 7.Was Adam capable of transgressing the law of God?
+    - 8.Did Adam have free will?
+    - 9.What commandment did God give Adam? What was the penalty for transgression of that commandment?
+    - 10.What two blessings were Adam's so long as he obeyed God's commandment?
     Section: '2'
   Title: Of Creation
 - Chapter: '5'
   Sections:
-  - Content: God, the great Creator of all things, doth uphold, direct, dispose, and
-      govern all creatures, actions, and things, from the greatest even to the least,
-      by his most wise and holy providence, according to his infallible fore-knowledge
-      and the free and immutable counsel of his own will, to the praise of the glory
-      of his wisdom, power, justice, goodness, and mercy.
-    ContentWithProofs: God, the great Creator of all things, doth uphold,[1] direct,
-      dispose, and govern all creatures, actions, and things,[2] from the greatest
-      even to the least,[3] by his most wise and holy providence,[4] according to
-      his infallible fore-knowledge[5] and the free and immutable counsel of his own
-      will,[6] to the praise of the glory of his wisdom, power, justice, goodness,
-      and mercy.[7]
-    Proofs:
-    - Id: 1
-      References:
-      - Heb.1.3
-    - Id: 3
-      References:
-      - Matt.10.29-Matt.10.31
-    - Id: 2
-      References:
-      - Ps.135.6
-      - Dan.4.34-Dan.4.35
-      - Acts.17.25-Acts.17.26
-      - Acts.17.28
-      - Job.38-Job.41
-    - Id: 5
-      References:
-      - Ps.94.8-Ps.94.11
-      - Acts.15.18
-    - Id: 4
-      References:
-      - Ps.104.24
-      - Ps.145.17
-      - Prov.15.3
-    - Id: 7
-      References:
-      - Gen.45.7
-      - Ps.145.7
-      - Isa.63.14
-      - Rom.9.17
-      - Eph.3.10
-    - Id: 6
-      References:
-      - Ps.33.10-Ps.33.11
-      - Eph.1.11
+  - Content: 
+    - 1.What does God the Creator uphold, direct, dispose, and govern?
+    - 2.Is God concerned with little things? Big things?
+    - 3.What are the attributes of God's Providence?"
+    - 4.Is God ever surprised by anything?
+    - 5.Is God's will ever forced to change to meet changing circumstances?
+    - 6.Which of God's attributes should we praise as a result of the doctrine of Providence?
+    - 7.Does our current culture's dominant worldview emphasize providence? Why do you think that is? 
     Section: '1'
-  - Content: Although in relation to the foreknowledge and decree of God, the first
-      cause, all things come to pass immutably and infallibly, yet by the same providence
-      he ordereth them to fall out, according to the nature of second causes, either
-      necessarily, freely, or contingently.
-    ContentWithProofs: Although in relation to the foreknowledge and decree of God,
-      the first cause, all things come to pass immutably and infallibly,[1] yet by
-      the same providence he ordereth them to fall out, according to the nature of
-      second causes, either necessarily, freely, or contingently.[2]
-    Proofs:
-    - Id: 1
-      References:
-      - Acts.2.23
-    - Id: 2
-      References:
-      - Gen.8.22
-      - Exod.21.13
-      - Deut.19.5
-      - 1Kgs.22.28
-      - 1Kgs.22.34
-      - Isa.10.6-Isa.10.7
-      - Jer.31.35
+  - Content: 
+    - 1.Does the doctrine of Providence rule out secondary causes?
+    - 2.Can God bring good out of evil? Defend your answer from Scripture.
     Section: '2'
-  - Content: God, in his ordinary providence, maketh use of means, yet is free to
-      work without, above, and against them, at his pleasure.
-    ContentWithProofs: God, in his ordinary providence, maketh use of means,[1] yet
-      is free to work without,[2] above,[3] and against them,[4] at his pleasure.
-    Proofs:
-    - Id: 1
-      References:
-      - Isa.55.10-Isa.55.11
-      - Hos.2.21-Hos.2.22
-      - Acts.27.31
-      - Acts.27.44
-    - Id: 3
-      References:
-      - Rom.4.19-Rom.4.21
-    - Id: 2
-      References:
-      - Job.34.10
-      - Hos.1.7
-      - Matt.4.4
-    - Id: 4
-      References:
-      - 2Kgs.6.6
-      - Dan.3.27
+  - Content: 
+    - 1.Is everything that happens a miracle?
+    - 2.Is anything that happens a miracle?
     Section: '3'
-  - Content: The almighty power, unsearchable wisdom, and infinite goodness of God
-      so far manifest themselves in his providence that it extendeth itself even to
-      the first fall, and all other sins of angels and men, and that not by a bare
-      permission, but such as hath joined with it a most wise and powerful bounding,
-      and otherwise ordering and governing of them, in a manifold dispensation, to
-      his own holy ends; yet so as the sinfulness thereof proceedeth only from the
-      creature, and not from God; who, being most holy and righteous, neither is nor
-      can be the author or approver of sin.
-    ContentWithProofs: The almighty power, unsearchable wisdom, and infinite goodness
-      of God so far manifest themselves in his providence that it extendeth itself
-      even to the first fall, and all other sins of angels and men,[1] and that not
-      by a bare permission,[2] but such as hath joined with it a most wise and powerful
-      bounding,[3] and otherwise ordering and governing of them, in a manifold dispensation,
-      to his own holy ends;[4] yet so as the sinfulness thereof proceedeth only from
-      the creature, and not from God; who, being most holy and righteous, neither
-      is nor can be the author or approver of sin.[5]
-    Proofs:
-    - Id: 1
-      References:
-      - 2Sam.16.10
-      - 2Sam.24.1
-      - 1Chr.21.1
-      - 1Kgs.22.22-1Kgs.22.23
-      - 1Chr.10.4
-      - 1Chr.10.13-1Chr.10.14
-      - Acts.2.23
-      - Acts.4.27-Acts.4.28
-      - Rom.11.32-Rom.11.34
-    - Id: 3
-      References:
-      - 2Kgs.19.28
-      - Ps.76.10
-    - Id: 2
-      References:
-      - Acts.14.16
-    - Id: 5
-      References:
-      - Ps.50.21
-      - Jas.1.13-Jas.1.14
-      - Jas.1.17
-      - 1John.2.16
-    - Id: 4
-      References:
-      - Gen.50.20
-      - Isa.10.6-Isa.10.7
-      - Isa.10.12
+  - Content: 
+    - 1.Does God's Providence extend to the fall? Other sins? Is this mere permission or is God's Providence binding?
+    - 2.Does this mean that God is the author of sin?
+    - 3.Does God approve of sin?
+    - 4.Does the sin in the world cancel out God's power, wisdom, or goodness?
     Section: '4'
-  - Content: The most wise, righteous, and gracious God doth oftentimes leave for
-      a season his own children to manifold temptations and the corruption of their
-      own hearts, to chastise them for their former sins, or to discover unto them
-      the hidden strength of corruption and deceitfulness of their hearts, that they
-      be humbled; and to raise them to a more close and constant dependence for their
-      support unto himself, and to make them more watchful against all future occasions
-      of sin, and for sundry other just and holy ends.
-    ContentWithProofs: The most wise, righteous, and gracious God doth oftentimes
-      leave for a season his own children to manifold temptations and the corruption
-      of their own hearts, to chastise them for their former sins, or to discover
-      unto them the hidden strength of corruption and deceitfulness of their hearts,
-      that they be humbled;[1] and to raise them to a more close and constant dependence
-      for their support unto himself, and to make them more watchful against all future
-      occasions of sin, and for sundry other just and holy ends.[2]
-    Proofs:
-    - Id: 1
-      References:
-      - 2Sam.24.1
-      - 2Chr.32.25-2Chr.32.26
-      - 2Chr.32.31
-    - Id: 2
-      References:
-      - Ps.73
-      - Ps.77.1-Ps.77.10
-      - Ps.77.12
-      - Mark.14.66-Mark.14.72
-      - John.21.15-John.21.17
-      - 2Cor.12.7-2Cor.12.9
+  - Content: 
+    - 1.Does God ever allow the elect to face temptations? 
+    - 2.Why does he do that?
+    - 3.In this section the Confession refers to the elect as "His own children." Do you think there is any significance that the authors chose that phrase?
+    - 4.Have you ever faced your own "dark night of the soul"? What was your heavenly Father showing you?
+    - 5.Is our salvation in jeopardy when that happens? Why or why not?
+    - 6.Which process in the ordo salutis is in view here?
     Section: '5'
-  - Content: As for those wicked and ungodly men whom God, as a righteous judge, for
-      former sins, doth blind and harden, from them he not only withholdeth his grace,
-      whereby they might have been enlightened in their understandings and wrought
-      upon in their hearts, but sometimes also withdraweth the gifts which they had,
-      and exposeth them to such objects as their corruption makes occasion of sin;
-      and withal, gives them over to their own lusts, the temptations of the world,
-      and the power of Satan; whereby it comes to pass that they harden themselves,
-      even under those means which God useth for the softening of others.
-    ContentWithProofs: As for those wicked and ungodly men whom God, as a righteous
-      judge, for former sins, doth blind and harden,[1] from them he not only withholdeth
-      his grace, whereby they might have been enlightened in their understandings
-      and wrought upon in their hearts,[2] but sometimes also withdraweth the gifts
-      which they had,[3] and exposeth them to such objects as their corruption makes
-      occasion of sin;[4] and withal, gives them over to their own lusts, the temptations
-      of the world, and the power of Satan;[5] whereby it comes to pass that they
-      harden themselves, even under those means which God useth for the softening
-      of others.[6]
-    Proofs:
-    - Id: 1
-      References:
-      - Rom.1.24
-      - Rom.1.26
-      - Rom.1.28
-      - Rom.11.7-Rom.11.8
-    - Id: 3
-      References:
-      - Matt.13.12
-      - Matt.25.29
-    - Id: 2
-      References:
-      - Deut.29.4
-    - Id: 5
-      References:
-      - Ps.81.11-Ps.81.12
-      - 2Thess.2.10-2Thess.2.12
-    - Id: 4
-      References:
-      - Deut.2.30
-      - 2Kgs.8.12-2Kgs.8.13
-    - Id: 6
-      References:
-      - Exod.7.3
-      - Exod.8.15
-      - Exod.8.32
-      - Isa.6.9-Isa.6.10
-      - Acts.28.26-Acts.28.27
-      - Isa.8.14
-      - 2Cor.2.15-2Cor.2.16
-      - 1Pet.2.7-1Pet.2.8
+  - Content: 
+    - 1.How does God deal with people who "suppress the truth in unrighteousness"? (Rom 1:24,26,28)
+    - 2.In what way is God's punishment for sin a kind of "poetic justice"?
+    - 3.Does the process described in this section happen only to those outside the covenant
+      community or can it happen to those inside the covenant community (the visible church)?
     Section: '6'
-  - Content: As the providence of God doth, in general, reach to all creatures, so,
-      after a most special manner, it taketh care of his Church, and disposeth all
-      things to the good thereof.
-    ContentWithProofs: As the providence of God doth, in general, reach to all creatures,
-      so, after a most special manner, it taketh care of his Church, and disposeth
-      all things to the good thereof.[1]
-    Proofs:
-    - Id: 1
-      References:
-      - Isa.43.3-Isa.43.5
-      - Isa.43.14
-      - Amos.9.8-Amos.9.9
-      - Rom.8.28
-      - 1Tim.4.10
+  - Content: 
+    - 1.Does God's providence extend to all creatures? (General Providence)
+    - 2.How does God's providence di\uFB00er when extended to his Church? (Special Providence)
+    - 3.Does this special providence guarantee the existence of any particular church
+      or denomination? What does it guarantee?
     Section: '7'
   Title: Of Providence
 - Chapter: '6'
   Sections:
-  - Content: Our first parents, being seduced by the subtlety and temptation of Satan,
-      sinned in eating the forbidden fruit. This their sin God was pleased, according
-      to his wise and holy counsel, to permit, having purposed to order it to his
-      own glory.
-    ContentWithProofs: Our first parents, being seduced by the subtlety and temptation
-      of Satan, sinned in eating the forbidden fruit.[1] This their sin God was pleased,
-      according to his wise and holy counsel, to permit, having purposed to order
-      it to his own glory.[2]
-    Proofs:
-    - Id: 1
-      References:
-      - Gen.3.13
-      - 2Cor.11.3
-    - Id: 2
-      References:
-      - Rom.11.32
+  - Content: 
+    - 1.Why did our first parents sin?
+    - 2.How did Satan entice them?
+    - 3.Why did God permit this to happen?
     Section: '1'
-  - Content: By this sin they fell from their original righteousness and communion
-      with God, and so became dead in sin, and wholly defiled in all the faculties
-      and parts of soul and body.
-    ContentWithProofs: By this sin they fell from their original righteousness and
-      communion with God,[1] and so became dead in sin,[2] and wholly defiled in all
-      the faculties and parts of soul and body.[3]
-    Proofs:
-    - Id: 1
-      References:
-      - Gen.3.6-Gen.3.8
-      - Eccl.7.29
-      - Rom.3.23
-    - Id: 3
-      References:
-      - Gen.6.5
-      - Jer.17.9
-      - Rom.3.10-Rom.3.19
-      - Titus.1.15
-    - Id: 2
-      References:
-      - Gen.2.17
-      - Eph.2.1
+  - Content: 
+    - 1.How serious was the sin of our first parents?
+    - 2.What did our first parents lose when they sinned?
+    - 3.How extensive was the defilement that resulted when our first parents sinned?
     Section: '2'
-  - Content: They being the root of all mankind, the guilt of this sin was imputed,
-      and the same death in sin and corrupted nature conveyed to all their posterity
-      descending from them by ordinary generation.
-    ContentWithProofs: They being the root of all mankind, the guilt of this sin was
-      imputed,[1] and the same death in sin and corrupted nature conveyed to all their
-      posterity descending from them by ordinary generation.[2]
-    Proofs:
-    - Id: 1
-      References:
-      - Gen.1.27-Gen.1.28
-      - Gen.2.16-Gen.2.17
-      - Acts.17.26
-      - Rom.5.12
-      - Rom.5.15-Rom.5.19
-      - 1Cor.15.21-1Cor.15.22
-      - 1Cor.15.45
-      - 1Cor.15.49
-    - Id: 2
-      References:
-      - Gen.5.3
-      - Job.14.4
-      - Job.15.14
-      - Ps.51.5
+  - Content: 
+    - 1.What was the effect of the fall upon our first parents' descendants?
+    - 2.Is it just for God to punish the whole human race for the transgression of one person? Explain your answer. 
     Section: '3'
-  - Content: From this original corruption, whereby we are utterly indisposed, disabled,
-      and made opposite to all good, and wholly inclined to all evil, do proceed all
-      actual transgressions.
-    ContentWithProofs: From this original corruption, whereby we are utterly indisposed,
-      disabled, and made opposite to all good,[1] and wholly inclined to all evil,[2]
-      do proceed all actual transgressions.[3]
-    Proofs:
-    - Id: 1
-      References:
-      - Rom.5.6
-      - Rom.7.18
-      - Rom.8.7
-      - Col.1.21
-    - Id: 3
-      References:
-      - Matt.15.19
-      - Eph.2.2-Eph.2.3
-      - Jas.1.14-Jas.1.15
-    - Id: 2
-      References:
-      - Gen.6.5
-      - Gen.8.21
-      - Rom.3.10-Rom.3.12
+  - Content: 
+    - 1.What are the effects of man's original corruption?
+    - 2.Are we sinners because we sin, or do we sin because we are sinners?
+    - 3.If left to ourselves, to our own inclinations and natural dispositions, could we come to Christ?
+    - 4.How can our inclinations and natural dispositions be changed?
     Section: '4'
-  - Content: This corruption of nature, during this life, doth remain in those that
-      are regenerated; and although it be through Christ pardoned and mortified, yet
-      both itself and all the motions thereof are truly and properly sin.
-    ContentWithProofs: This corruption of nature, during this life, doth remain in
-      those that are regenerated;[1] and although it be through Christ pardoned and
-      mortified, yet both itself and all the motions thereof are truly and properly
-      sin.[2]
-    Proofs:
-    - Id: 1
-      References:
-      - Prov.20.9
-      - Eccl.7.20
-      - Rom.7.14
-      - Rom.7.17-Rom.7.18
-      - Rom.7.23
-      - Jas.3.2
-      - 1John.1.8
-      - 1John.1.10
-    - Id: 2
-      References:
-      - Rom.7.5
-      - Rom.7.7-Rom.7.8
-      - Rom.7.25
-      - Gal.5.17
+  - Content: 
+    - 1.Does regeneration eliminate our original corruption?
+    - 2.How can it be pardoned and mortified?
+    - 3.Is sin still sin after regeneration?
+    - 4.Can we achieve moral perfection in this life?
     Section: '5'
-  - Content: Every sin, both original and actual, being a transgression of the righteous
-      law of God, and contrary thereunto, doth, in its own nature, bring guilt upon
-      the sinner, whereby he is bound over to the wrath of God and curse of the law,
-      and so made subject to death, with all miseries spiritual, temporal, and eternal.
-    ContentWithProofs: Every sin, both original and actual, being a transgression
-      of the righteous law of God, and contrary thereunto,[1] doth, in its own nature,
-      bring guilt upon the sinner,[2] whereby he is bound over to the wrath of God[3]
-      and curse of the law,[4] and so made subject to death,[5] with all miseries
-      spiritual,[6] temporal,[7] and eternal.[8]
-    Proofs:
-    - Id: 1
-      References:
-      - 1John.3.4
-    - Id: 3
-      References:
-      - Eph.2.3
-    - Id: 2
-      References:
-      - Rom.2.15
-      - Rom.3.9
-      - Rom.3.19
-    - Id: 5
-      References:
-      - Rom.6.23
-    - Id: 4
-      References:
-      - Gal.3.10
-    - Id: 7
-      References:
-      - Lam.3.39
-      - Rom.8.20
-    - Id: 6
-      References:
-      - Eph.4.18
-    - Id: 8
-      References:
-      - Matt.25.41
-      - 2Thess.1.9
+  - Content: 
+    - 1.How does sin relate to the law of God?
+    - 2.What happens to the sinner when he transgresses the law of God?
+    - 3.What role do feelings have upon our guilt or innocence?
+    - 4.How can we distinguish between objective guilt and guilt feelings?
+    - 5.How bad is man? How mad is God? How would our modern culture answer those questions?
+    - 6.Where in the Bible would you say the purest demonstration of the reality of God's wrath is displayed?
+    - 7.R.C. Sproul writes, "This world is cursed because it is sinful. The guilt is objective, the wrath is objective, and the curse is objective, which means they correspond to reality." What did he mean, and why is this important?
+    - 'Truths We Confess: A Systematic Exposition of the Westminster Confession of Faith'
+    - Revised Edition (c) 2019 by R.C. Sproul"
+    - Published by Reformation Trust Publishing a division of Ligonier Ministries
+    - 421 Ligonier Court, Sanford, FL 3277114
     Section: '6'
   Title: Of the Fall of Man, of Sin, and of the Punishment Thereof
 - Chapter: '7'
   Sections:
-  - Content: The distance between God and the creature is so great that although reasonable
-      creatures do owe obedience unto him as their Creator, yet they could never have
-      any fruition of him as their blessedness and reward but by some voluntary condescension
-      on God's part, which he hath been pleased to express by way of covenant.
-    ContentWithProofs: The distance between God and the creature is so great that
-      although reasonable creatures do owe obedience unto him as their Creator, yet
-      they could never have any fruition of him as their blessedness and reward but
-      by some voluntary condescension on God's part, which he hath been pleased to
-      express by way of covenant.[1]
-    Proofs:
-    - Id: 1
-      References:
-      - 1Sam.2.25
-      - Job.9.32-Job.9.33
-      - Job.22.2-Job.22.3
-      - Job.35.7-Job.35.8
-      - Ps.100.2-Ps.100.3
-      - Ps.113.5-Ps.113.6
-      - Isa.40.13-Isa.40.17
-      - Luke.17.10
-      - Acts.17.24-Acts.17.25
+  - Content: 
+    - 1.What do reasonable creatures owe to God?
+    - 2.What does it take for a person to attain blessedness or reward from God?
+    - 3.What is a covenant?
+    - 4.Give an example of a covenant from contemporary society.
     Section: '1'
-  - Content: The first covenant made with man was a covenant of works, wherein life
-      was promised to Adam, and in him to his posterity, upon condition of perfect
-      and personal obedience.
-    ContentWithProofs: The first covenant made with man was a covenant of works,[1]
-      wherein life was promised to Adam, and in him to his posterity,[2] upon condition
-      of perfect and personal obedience.[3]
-    Proofs:
-    - Id: 1
-      References:
-      - Gal.3.12
-    - Id: 3
-      References:
-      - Gen.2.17
-      - Gal.3.10
-    - Id: 2
-      References:
-      - Rom.5.12-Rom.5.20
-      - Rom.10.5
+  - Content: 
+    - 1.What was the nature of God's first covenant with Adam?
+    - 2.What did God promise to Adam and his posterity in that covenant?
+    - 3.What was the condition placed upon Adam?
     Section: '2'
-  - Content: 'Man by his fall having made himself incapable of life by that covenant,
-      the Lord was pleased to make a second, commonly called the covenant of grace:
-      wherein he freely offered unto sinners life and salvation by Jesus Christ, requiring
-      of them faith in him that they may be saved, and promising to give unto all
-      those that are ordained unto life his Holy Spirit, to make them willing and
-      able to believe.'
-    ContentWithProofs: 'Man by his fall having made himself incapable of life by that
-      covenant, the Lord was pleased to make a second,[1] commonly called the covenant
-      of grace: wherein he freely offered unto sinners life and salvation by Jesus
-      Christ, requiring of them faith in him that they may be saved,[2] and promising
-      to give unto all those that are ordained unto life his Holy Spirit, to make
-      them willing and able to believe.[3]'
-    Proofs:
-    - Id: 1
-      References:
-      - Gen.3.15
-      - Isa.42.6
-      - Rom.3.20-Rom.3.21
-      - Rom.8.3
-      - Gal.3.21
-    - Id: 3
-      References:
-      - Ezek.36.26-Ezek.36.27
-      - John.6.44-John.6.45
-    - Id: 2
-      References:
-      - Mark.16.15-Mark.16.16
-      - John.3.16
-      - Rom.10.6
-      - Rom.10.9
-      - Gal.3.11
+  - Content: 
+    - 1.How did the first covenant work out?
+    - 2.What did the Lord do then?
+    - 3.What is the second covenant called?
+    - 4.What did God promise in the second covenant?
+    - 5.What condition was placed upon man in the second covenant?
+    - 6.What role was the Holy Spirit to play in the second covenant?
+    - 7.Describe the work of the three persons of the Trinity in the Covenant of Grace.
+    - 8.Does the covenant of grace annul the covenant of works? Explain.
     Section: '3'
-  - Content: This covenant of grace is frequently set forth in the Scripture by the
-      name of a testament, in reference to the death of Jesus Christ the testator,
-      and to the everlasting inheritance, with all things belonging to it, therein
-      bequeathed.
-    ContentWithProofs: This covenant of grace is frequently set forth in the Scripture
-      by the name of a testament, in reference to the death of Jesus Christ the testator,
-      and to the everlasting inheritance, with all things belonging to it, therein
-      bequeathed.[1]
-    Proofs:
-    - Id: 1
-      References:
-      - Luke.22.20
-      - 1Cor.11.25
-      - Heb.7.22
-      - Heb.9.15-Heb.9.17
+  - Content: 
+    - 1.How is the Covenant of grace frequently set forth in Scripture?
+    - 2.What is a testament?
+    - 3.Who is the testator?
+    - 4.Read John 14:1-3, 27. What is Christ leaving his disciples?
+    - 5.Describe the peace that Christ is promising.
     Section: '4'
-  - Content: 'This covenant was differently administered in the time of the law and
-      in the time of the gospel: under the law it was administered by promises, prophecies,
-      sacrifices, circumcision, the paschal lamb, and other types and ordinances delivered
-      to the people of the Jews, all fore-signifying Christ to come, which were for
-      that time sufficient and efficacious, through the operation of the Spirit, to
-      instruct and build up the elect in faith in the promised Messiah, by whom they
-      had full remission of sins and eternal salvation; and is called the Old Testament.'
-    ContentWithProofs: This covenant was differently administered in the time of the
-      law and in the time of the gospel:[1] under the law it was administered by promises,
-      prophecies, sacrifices, circumcision, the paschal lamb, and other types and
-      ordinances delivered to the people of the Jews, all fore-signifying Christ to
-      come,[2] which were for that time sufficient and efficacious, through the operation
-      of the Spirit, to instruct and build up the elect in faith in the promised Messiah,[3]
-      by whom they had full remission of sins and eternal salvation; and is called
-      the Old Testament.[4]
-    Proofs:
-    - Id: 1
-      References:
-      - 2Cor.3.6-2Cor.3.9
-    - Id: 3
-      References:
-      - John.8.56
-      - 1Cor.10.1-1Cor.10.4
-      - Heb.11.13
-    - Id: 2
-      References:
-      - Rom.4.11
-      - Col.2.11-Col.2.12
-      - 1Cor.5.7
-      - Heb.8-Heb.10
-    - Id: 4
-      References:
-      - Gal.3.7-Gal.3.9
-      - Gal.3.14
+  - Content: 
+    - 1.How was the covenant of grace administered in the time of the law?
+    - 2.To what were of all of these rituals (types and shadows) pointing?
+    - 3.Is law restricted to the Old Testament and grace to the New Testament?
+    - 4.Were people saved differently in the OT than in the new?
+    - 5.How would you describe the big difference between the old and new covenants?
     Section: '5'
-  - Content: Under the gospel, when Christ the substance was exhibited, the ordinances
-      in which this covenant is dispensed are the preaching of the Word and the administration
-      of the sacraments of Baptism and the Lord's Supper; which, though fewer in number,
-      and administered with more simplicity and less outward glory, yet in them it
-      is held forth in more fulness, evidence, and spiritual efficacy, to all nations,
-      both Jews and Gentiles; and is called the New Testament. There are not, therefore,
-      two covenants of grace differing in substance, but one and the same under various
-      dispensations.
-    ContentWithProofs: Under the gospel, when Christ the substance[1] was exhibited,
-      the ordinances in which this covenant is dispensed are the preaching of the
-      Word and the administration of the sacraments of Baptism and the Lord's Supper;[2]
-      which, though fewer in number, and administered with more simplicity and less
-      outward glory, yet in them it is held forth in more fulness, evidence, and spiritual
-      efficacy,[3] to all nations, both Jews and Gentiles;[4] and is called the New
-      Testament.[5] There are not, therefore, two covenants of grace differing in
-      substance, but one and the same under various dispensations.[6]
-    Proofs:
-    - Id: 1
-      References:
-      - Col.2.17
-    - Id: 3
-      References:
-      - Jer.31.33-Jer.31.34
-      - Heb.12.22-Heb.12.28
-    - Id: 2
-      References:
-      - Matt.28.19-Matt.28.20
-      - 1Cor.11.23-1Cor.11.25
-    - Id: 5
-      References:
-      - Luke.22.20
-    - Id: 4
-      References:
-      - Matt.28.19
-      - Eph.2.15-Eph.2.19
-    - Id: 6
-      References:
-      - Ps.32.1
-      - Rom.4.3
-      - Acts.15.11
-      - Rom.3.21-Rom.3.23
-      - Rom.3.30
-      - Rom.4.6
-      - Rom.4.16-Rom.4.17
-      - Rom.4.23-Rom.4.24
-      - Gal.3.14
-      - Gal.3.16
-      - Heb.13.8
+  - Content: 
+    - 1.What are the ordinances dispensed under the gospel?
+    - 2.How do these sacraments compare to those of the OT?
     Section: '6'
   Title: Of God's Covenant with Man
 - Chapter: '8'
   Sections:
-  - Content: It pleased God, in his eternal purpose, to choose and ordain the Lord
-      Jesus, his only-begotten Son, to be the Mediator between God and man, the Prophet,
-      Priest, and King; the Head and Saviour of his Church, the Heir of all things,
-      and Judge of the world; unto whom he did, from all eternity, give a people to
-      be his seed, and to be by him in time redeemed, called, justified, sanctified,
-      and glorified.
-    ContentWithProofs: It pleased God, in his eternal purpose, to choose and ordain
-      the Lord Jesus, his only-begotten Son, to be the Mediator between God and man,[1]
-      the Prophet,[2] Priest,[3] and King;[4] the Head and Saviour of his Church,[5]
-      the Heir of all things,[6] and Judge of the world;[7] unto whom he did, from
-      all eternity, give a people to be his seed,[8] and to be by him in time redeemed,
-      called, justified, sanctified, and glorified.[9]
-    Proofs:
-    - Id: 1
-      References:
-      - Isa.42.1
-      - John.3.16
-      - 2Tim.2.5
-      - 1Pet.1.19-1Pet.1.20
-    - Id: 3
-      References:
-      - Heb.5.5-Heb.5.6
-    - Id: 2
-      References:
-      - Acts.3.22
-    - Id: 5
-      References:
-      - Eph.5.23
-    - Id: 4
-      References:
-      - Ps.2.6
-      - Luke.1.33
-    - Id: 7
-      References:
-      - Acts.17.31
-    - Id: 6
-      References:
-      - Heb.1.2
-    - Id: 9
-      References:
-      - Isa.55.4-Isa.55.5
-      - 1Cor.1.30
-      - 1Tim.2.6
-    - Id: 8
-      References:
-      - Ps.22.30
-      - Isa.53.10
-      - John.17.6
+  - Content: 
+    - 1.Who did God choose and ordain to be the mediator between God and man?
+    - 2.Who took the initiative in this work of reconciliation?
+    - 3.What is Christ's relationship to the Father?
+    - 4.What is a mediator?
+    - 5.What titles and functions did God ordain unto the Lord Jesus?
+    - 6.Describe each of these functions in your own words.
+    - 7.What did God give to Christ Jesus? When did he give it?
+    - 8.What does Jesus accomplish for his seed?
+    - 9.It is said that of all religions, only Christianity has a God-man. Why is that significant?
     Section: '1'
-  - Content: 'The Son of God, the second person in the Trinity, being very and eternal
-      God, of one substance, and equal with the Father, did, when the fulness of time
-      was come, take upon him man''s nature, with all the essential properties and
-      common infirmities thereof, yet without sin: being conceived by the power of
-      the Holy Ghost in the womb of the Virgin Mary, of her substance. So that two
-      whole, perfect, and distinct natures, the Godhead and the manhood, were inseparably
-      joined together in one person, without conversion, composition, or confusion.
-      Which person is very God and very man, yet one Christ, the only mediator between
-      God and man.'
-    ContentWithProofs: The Son of God, the second person in the Trinity, being very
-      and eternal God, of one substance, and equal with the Father, did, when the
-      fulness of time was come, take upon him man's nature,[1] with all the essential
-      properties and common infirmities thereof, yet without sin:[2] being conceived
-      by the power of the Holy Ghost in the womb of the Virgin Mary, of her substance.[3]
-      So that two whole, perfect, and distinct natures, the Godhead and the manhood,
-      were inseparably joined together in one person, without conversion, composition,
-      or confusion.[4] Which person is very God and very man, yet one Christ, the
-      only mediator between God and man.[5]
-    Proofs:
-    - Id: 1
-      References:
-      - John.1.1
-      - John.1.14
-      - Gal.4.4
-      - Phil.2.6
-      - 1John.5.20
-    - Id: 3
-      References:
-      - Luke.1.27
-      - Luke.1.31
-      - Luke.1.35
-      - Gal.4.4
-    - Id: 2
-      References:
-      - Heb.2.14
-      - Heb.2.16-Heb.2.17
-      - Heb.4.15
-    - Id: 5
-      References:
-      - Rom.1.3-Rom.1.4
-      - 1Tim.2.5
-    - Id: 4
-      References:
-      - Luke.1.35
-      - Rom.9.5
-      - Col.2.9
-      - 1Tim.3.16
-      - 1Pet.3.18
+  - Content: 
+    - 1.How human was the Son of God when he took on a human nature?
+    - 2.How much divinity did he give up?
+    - 3.How was he conceived?
+    - 4.How were his two natures joined together in one person?
+    - 5.How can one person be both "very God and very man"? (Romans 1:3-4)
+    - 6.How did this qualify Christ to be the "only Mediator between God and man"?
     Section: '2'
-  - Content: The Lord Jesus, in his human nature thus united to the divine, was sanctified
-      and anointed with the Holy Spirit above measure; having in him all the treasures
-      of wisdom and knowledge, in whom it pleased the Father that all fulness should
-      dwell; to the end that, being holy, harmless, undefiled, and full of grace and
-      truth, he might be thoroughly furnished to execute the office of a mediator
-      and surety. Which office he took not unto himself, but was thereunto called
-      by his Father, who put all power and judgment into his hand, and gave him commandment
-      to execute the same.
-    ContentWithProofs: The Lord Jesus, in his human nature thus united to the divine,
-      was sanctified and anointed with the Holy Spirit above measure;[1] having in
-      him all the treasures of wisdom and knowledge,[2] in whom it pleased the Father
-      that all fulness should dwell;[3] to the end that, being holy, harmless, undefiled,
-      and full of grace and truth,[4] he might be thoroughly furnished to execute
-      the office of a mediator and surety.[5] Which office he took not unto himself,
-      but was thereunto called by his Father,[6] who put all power and judgment into
-      his hand, and gave him commandment to execute the same.[7]
-    Proofs:
-    - Id: 1
-      References:
-      - Ps.45.7
-      - John.3.34
-    - Id: 3
-      References:
-      - Col.1.19
-    - Id: 2
-      References:
-      - Col.2.3
-    - Id: 5
-      References:
-      - Acts.10.38
-      - Heb.7.22
-      - Heb.12.24
-    - Id: 4
-      References:
-      - John.1.14
-      - Heb.7.26
-    - Id: 7
-      References:
-      - Matt.28.18
-      - John.5.22
-      - John.5.27
-      - Acts.2.36
-    - Id: 6
-      References:
-      - Heb.5.4-Heb.5.5
+  - Content: 
+    - 1.What was the nature of the relationship between Jesus' human and divine natures?
+    - 2.What does it mean that the Lord Jesus was "sanctified"? 
+    - 3.Give an example of the attribute of Jesus' human nature.
+    - 4.Give an illustration of his divine nature being displayed.
+    - 5.Why was the Lord Jesus "anointed with the Holy Spirit, above measure"?
+    - 6.Who called the Lord Jesus to be the mediator between God and man?
+    - 7.What was he provided and empowered to do?
     Section: '3'
-  - Content: This office the Lord Jesus did most willingly undertake, which, that
-      he might discharge, he was made under the law, and did perfectly fulfill it;
-      endured most grievous torments immediately in his soul, and most painful sufferings
-      in his body; was crucified, and died; was buried, and remained under the power
-      of death, yet saw no corruption. On the third day he arose from the dead, with
-      the same body in which he suffered; with which also he ascended into heaven,
-      and there sitteth at the right hand of his Father, making intercession; and
-      shall return to judge men and angels at the end of the world.
-    ContentWithProofs: This office the Lord Jesus did most willingly undertake,[1]
-      which, that he might discharge, he was made under the law,[2] and did perfectly
-      fulfill it;[3] endured most grievous torments immediately in his soul,[4] and
-      most painful sufferings in his body;[5] was crucified, and died;[6] was buried,
-      and remained under the power of death, yet saw no corruption.[7] On the third
-      day he arose from the dead,[8] with the same body in which he suffered;[9] with
-      which also he ascended into heaven, and there sitteth at the right hand of his
-      Father,[10] making intercession;[11] and shall return to judge men and angels
-      at the end of the world.[12]
-    Proofs:
-    - Id: 1
-      References:
-      - Ps.40.7-Ps.40.8
-      - Heb.10.5-Heb.10.10
-      - John.10.18
-      - Phil.2.8
-    - Id: 3
-      References:
-      - Matt.3.15
-      - Matt.5.17
-    - Id: 2
-      References:
-      - Gal.4.4
-    - Id: 5
-      References:
-      - Matt.26-Matt.27
-    - Id: 4
-      References:
-      - Matt.26.37-Matt.26.38
-      - Matt.27.46
-      - Luke.22.44
-    - Id: 7
-      References:
-      - Acts.2.23-Acts.2.24
-      - Acts.2.27
-      - Acts.13.37
-      - Rom.6.9
-    - Id: 6
-      References:
-      - Phil.2.8
-    - Id: 9
-      References:
-      - John.20.25
-      - John.20.27
-    - Id: 8
-      References:
-      - 1Cor.15.3-1Cor.15.4
-    - Id: 10
-      References:
-      - Mark.16.19
-    - Id: 12
-      References:
-      - Matt.13.40-Matt.13.42
-      - Acts.1.11
-      - Acts.10.42
-      - Rom.14.9-Rom.14.10
-      - 2Pet.2.4
-      - Jude.1.6
-    - Id: 11
-      References:
-      - Rom.8.34
-      - Heb.7.25
-      - Heb.9.24
+  - Content: 
+    - 1.What did the Lord Jesus undertake in order to discharge the office of mediator between God and man?
+    - 2.Was it possible for Jesus to remain in the grave? Why or why not?
+    - 3.With what kind of body did Jesus come out of the grave? Was his ascension physical or spiritual?
+    - 4.Where is Jesus now?
+    - 5.What is he doing now?
+    - 6.When and why will Jesus return?
     Section: '4'
-  - Content: The Lord Jesus, by his perfect obedience and sacrifice of himself, which
-      he through the eternal Spirit once offered up unto God, hath fully satisfied
-      the justice of his Father, and purchased not only reconciliation, but an everlasting
-      inheritance in the kingdom of heaven, for all those whom the Father hath given
-      unto him.
-    ContentWithProofs: The Lord Jesus, by his perfect obedience and sacrifice of himself,
-      which he through the eternal Spirit once offered up unto God, hath fully satisfied
-      the justice of his Father,[1] and purchased not only reconciliation, but an
-      everlasting inheritance in the kingdom of heaven, for all those whom the Father
-      hath given unto him.[2]
-    Proofs:
-    - Id: 1
-      References:
-      - Rom.3.25-Rom.3.26
-      - Rom.5.19
-      - Eph.5.2
-      - Heb.9.14
-      - Heb.9.16
-      - Heb.10.14
-    - Id: 2
-      References:
-      - Dan.9.24
-      - Dan.9.26
-      - John.17.2
-      - Eph.1.11
-      - Eph.1.14
-      - Col.1.19-Col.1.20
-      - Heb.9.12
-      - Heb.9.15
+  - Content: 
+    - 1.What did the Lord Jesus accomplish by his perfect obedience and sacrifice?
+    - 2.For whom did he accomplish this?
+    - 3.Are we saved by good works? Explain your answer.
+    - 4.Is God's wrath satisfied? For whose benefit? How did that happen?
+    - 5.What do you think Jesus meant when he said from the cross, "It is finished!"?
     Section: '5'
-  - Content: Although the work of redemption was not actually wrought by Christ till
-      after his incarnation, yet the virtue, efficacy, and benefits thereof were communicated
-      unto the elect, in all ages successively from the beginning of the world, in
-      and by those promises, types, and sacrifices, wherein he was revealed, and signified
-      to be the seed of the woman which should bruise the serpent's head, and the
-      Lamb slain from the beginning of the world, being yesterday and today the same,
-      and forever.
-    ContentWithProofs: Although the work of redemption was not actually wrought by
-      Christ till after his incarnation, yet the virtue, efficacy, and benefits thereof
-      were communicated unto the elect, in all ages successively from the beginning
-      of the world, in and by those promises, types, and sacrifices, wherein he was
-      revealed, and signified to be the seed of the woman which should bruise the
-      serpent's head, and the Lamb slain from the beginning of the world, being yesterday
-      and today the same, and forever.[1]
-    Proofs:
-    - Id: 1
-      References:
-      - Gen.3.15
-      - Gal.4.4-Gal.4.5
-      - Heb.13.8
-      - Rev.13.8
+  - Content: 
+    - 1.How was redemption accomplished for Old Testament believers?
+    - 2.What did the Old Testament promises, types, and sacrifices point to?
     Section: '6'
-  - Content: Christ, in the work of mediation, acteth according to both natures; by
-      each nature doing that which is proper to itself; yet, by reason of the unity
-      of the person, that which is proper to one nature is sometimes, in Scripture,
-      attributed to the person denominated by the other nature.
-    ContentWithProofs: Christ, in the work of mediation, acteth according to both
-      natures; by each nature doing that which is proper to itself;[1] yet, by reason
-      of the unity of the person, that which is proper to one nature is sometimes,
-      in Scripture, attributed to the person denominated by the other nature.[2]
-    Proofs:
-    - Id: 1
-      References:
-      - Heb.9.14
-      - 1Pet.3.18
-    - Id: 2
-      References:
-      - John.3.13
-      - Acts.20.28
-      - 1John.3.16
+  - Content: 
+    - 1.Read Acts 20:28 and 1 John 3:16. Both refer to God's blood and God's death. Does this mean that Christ bled and died according to his divine nature?
     Section: '7'
-  - Content: To all those for whom Christ hath purchased redemption he doth certainly
-      and effectually apply and communicate the same; making intercession for them,
-      and revealing unto them, in and by the Word, the mysteries of salvation; effectually
-      persuading them by his Spirit to believe and obey; and governing their hearts
-      by his Word and Spirit; overcoming all their enemies by his almighty power and
-      wisdom, in such manner and ways as are most consonant to his wonderful and unsearchable
-      dispensation.
-    ContentWithProofs: To all those for whom Christ hath purchased redemption he doth
-      certainly and effectually apply and communicate the same;[1] making intercession
-      for them,[2] and revealing unto them, in and by the Word, the mysteries of salvation;[3]
-      effectually persuading them by his Spirit to believe and obey; and governing
-      their hearts by his Word and Spirit;[4] overcoming all their enemies by his
-      almighty power and wisdom, in such manner and ways as are most consonant to
-      his wonderful and unsearchable dispensation.[5]
-    Proofs:
-    - Id: 1
-      References:
-      - John.6.37
-      - John.6.39
-      - John.10.15-John.10.16
-    - Id: 3
-      References:
-      - John.15.13
-      - John.15.15
-      - John.17.6
-      - Eph.1.7-Eph.1.9
-    - Id: 2
-      References:
-      - Rom.8.34
-      - 1John.2.1-1John.2.2
-    - Id: 5
-      References:
-      - Ps.110.1
-      - Mal.4.2-Mal.4.3
-      - 1Cor.15.25-1Cor.15.26
-      - Col.2.15
-    - Id: 4
-      References:
-      - John.14.16
-      - John.17.17
-      - Rom.8.9
-      - Rom.8.14
-      - Rom.15.18-Rom.15.19
-      - 2Cor.4.13
-      - Heb.12.2
+  - Content: 
+    - 1.Did Christ's atonement make redemption possible or assured? For whom?"
+    - 2.What is Christ doing for his Church now?
+    - 3.Do those for whom Christ purchase redemption (the Church) ultimately win their battle? How do we know?
     Section: '8'
   Title: Of Christ the Mediator
 - Chapter: '9'
