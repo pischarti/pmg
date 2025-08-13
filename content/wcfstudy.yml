@@ -69,42 +69,18 @@ Data:
       - 1.What are the books of the Bible and how are they subdivided?
       - 2.What does it mean that these books are to be the rule of faith and life?
       - 3.Is there any value in reading the Apocrypha?
-<<<<<<< HEAD
-<<<<<<< HEAD
     Section: '2 and 3'
-=======
-    Section: '1.2 and 1.3'
->>>>>>> 2032ca7 (update guide from intro to ch2)
-=======
-    Section: '2 and 3'
->>>>>>> e81309d (update study through chapter 8)
   - Content: 
       - 1.On what does the authority of the Bible depend?
       - 2.Do Roman Catholics agree with this section of the WCF? Why or why not? 
       - 3.This section describes the doctrine of Sola Scriptura. Put that doctrine into your own words.
       - 4.An old saying goes, "God said it, I believe it, that settles it." Do you agree with this saying? Why or why not?"
-<<<<<<< HEAD
-<<<<<<< HEAD
     Section: '4'
-=======
-    Section: '1.4'
->>>>>>> 2032ca7 (update guide from intro to ch2)
-=======
-    Section: '4'
->>>>>>> e81309d (update study through chapter 8)
   - Content: 
       - 1.How does Scripture evidence itself to be the word of God?
       - 2.Is the testimony of the church su\uFB03cient to convince a person of the truth of the Bible?"
       - 3.Can we convince someone of the "infallible truth and divine authority" of the Bible through our winsome ways and intellectual prowess? What else is required?
-<<<<<<< HEAD
-<<<<<<< HEAD
     Section: '5'
-=======
-    Section: '1.5'
->>>>>>> 2032ca7 (update guide from intro to ch2)
-=======
-    Section: '5'
->>>>>>> e81309d (update study through chapter 8)
   - Content: 
       - 1.Where do we find everything we need to know about God and our relationship to Him?"
       - 2.Are "all things necessary for His own glory, man's salvation, faith, and life" expressly set down in Scripture?
@@ -123,8 +99,6 @@ Data:
       - 2.Where should the church look to resolve "controversies of religion"?
       - 3.What should we do if we don't read Hebrew and Greek?"
       - 4.Why should we translate the Bible into the language of every nation?
-<<<<<<< HEAD
-<<<<<<< HEAD
     Section: '8'
   - Content: 
       - 1.What is the infallible rule of interpretation of Scripture?
@@ -134,24 +108,6 @@ Data:
       - 1.What is the supreme authority for the church?
       - 2.Who wrote the Scriptures?
     Section: '10'
-=======
-    Section: '1.8'
-=======
-    Section: '8'
->>>>>>> e81309d (update study through chapter 8)
-  - Content: 
-      - 1.What is the infallible rule of interpretation of Scripture?
-      - 2.When there is a question about the true and full sense of any Scripture, where can we find the best commentary?
-    Section: '9'
-  - Content: 
-      - 1.What is the supreme authority for the church?
-      - 2.Who wrote the Scriptures?
-<<<<<<< HEAD
-    Section: '1.10'
->>>>>>> 2032ca7 (update guide from intro to ch2)
-=======
-    Section: '10'
->>>>>>> e81309d (update study through chapter 8)
   Title: Of the Holy Scripture
 - Chapter: '2'
   Sections:
