@@ -20,7 +20,7 @@ const fields = [
     label: 'Email',
     placeholder: 'Enter your email',
     required: true,
-    description: 'We will send you a magic link to sign in'
+    description: 'Send magic link to sign in'
   }
 ]
 
