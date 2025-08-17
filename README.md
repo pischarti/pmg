@@ -24,6 +24,22 @@ Start the development server on `http://localhost:3000`:
 pnpm dev
 ```
 
+### Supabase
+
+```sh
+supabase link --project-ref <project-id>
+# You can get <project-id> from your project's dashboard URL: https://supabase.com/dashboard/project/<project-id>
+supabase login
+# OR 
+export SUPABASE_ACCESS_TOKEN=<token>
+supabase db pull
+```
+
+```.env
+SUPABASE_URL="YOUR_SUPABASE_URL"
+SUPABASE_KEY="YOUR_SUPABASE_ANON_KEY"
+```
+
 ## Production
 
 Build the application for production:

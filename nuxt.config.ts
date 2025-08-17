@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@nuxt/ui-pro',
     '@nuxt/content',
     '@vueuse/nuxt',
+    // '@nuxtjs/supabase',
     'nuxt-og-image'
   ],
 

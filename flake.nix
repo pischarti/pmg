@@ -40,6 +40,8 @@
               git
               gh
               code-cursor
+              
+              supabase-cli
             ];
           };
         });
