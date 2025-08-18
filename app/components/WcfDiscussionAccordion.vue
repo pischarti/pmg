@@ -14,8 +14,8 @@ const sortedDiscussion = computed(() => {
   return [...list].sort((a, b) => a.Id - b.Id)
 })
 
-const proofItems = computed<AccordionItem[]>(() =>
-  sortedProofs.value.map(p => ({
+const discussionItems = computed<AccordionItem[]>(() =>
+  sortedDiscussion.value.map(p => ({
     label: `[${p.Id}] ${p.References.join(', ')}`
   }))
 )
