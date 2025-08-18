@@ -14,8 +14,8 @@ const sortedDiscussion = computed(() => {
   return [...list].sort((a, b) => a.Id - b.Id)
 })
 
-const proofItems = computed<AccordionItem[]>(() =>
-  sortedProofs.value.map(p => ({
+const discussionItems = computed<AccordionItem[]>(() =>
+  sortedDiscussion.value.map(p => ({
     label: `[${p.Id}] ${p.References.join(', ')}`
   }))
 )
@@ -24,14 +24,14 @@ const proofItems = computed<AccordionItem[]>(() =>
 <template>
   <div>
     <UAccordion
-      v-if="sortedProofs.length"
-      :items="proofItems"
+      v-if="sortedDiscussion.length"
+      :items="discussionItems"
       class="pl-6 sm:pl-8"
     >
       <template #content="{ index }">
         <ul class="list-disc pl-6 space-y-1 text-sm text-muted">
           <li
-            v-for="ref in (sortedProofs[index]?.References || [])"
+            v-for="ref in (sortedDiscussion[index]?.References || [])"
             :key="ref"
           >
             <WcfReferenceAccordion :reference="ref" />
