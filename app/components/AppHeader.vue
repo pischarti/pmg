@@ -14,7 +14,7 @@ const items = computed(() => [
     active: route.path.startsWith('/wcf')
   },
   {
-    label: 'Subscribe',
+    label: 'Donate',
     to: '/pricing'
   }
 ])
