@@ -1,61 +1,70 @@
 title: Support our cause
-description: Please consider subscribing to help us make more study guides available to equip the next generation. Thanks for your support!
+description: Please consider donating to help us make more study guides available to equip the next generation. Thanks for your support!
 seo:
-  title: Pricing
-  description: Choose the plan that's right for you.
+  title: Donate
+  description: 
 navigation.icon: i-lucide-credit-card
 plans:
-  - title: Basic
-    description: A inexpensive month of the SDG Times.
+  - title: Donate
+    description: 
     price:
-      month: $9.9
-      year: $99.9
+      month: $9.99
+      year: $99.99
     button:
-      label: Begin Basic Plan
+      label: Support
       color: neutral
       variant: subtle
-    features:
-      - One month/year of articles including,
-      - News Flash
-      - Theology
-      - Short Bio
-      - Stories
-      - Poetry
-      - And so much more!
-  - title: Standard
-    description: A standard plan to get these wonderful articles every month.
-    price:
-      month: $19.9
-      year: $199.9
-    highlight: true
-    scale: true
-    button:
-      label: Begin Standard Plan
-    features:
-      - One month/year of articles including,
-      - An illustration
-      - If you're lucky, an interview
-      - Curious Facts
-      - Scientific Facts
-      - 1 extra page filled with articles
-      - And so much more!
-  - title: Premium
-    description: A premium plan to get the best of the SDG Times.
-    price:
-      month: $29.9
-      year: $299.9
-    button:
-      label: Begin Premium Plan
-      color: neutral
-      variant: subtle
-    features:
-      - One month/year of articles including,
-      - An illustration
-      - Another extra page filled to the brim with articles
-      - Vocab matches
-      - Sudoku
-      - Binary puzzles
-      - And so much more!
+  # - title: Basic
+  #   description: A inexpensive month of the SDG Times.
+  #   price:
+  #     month: $9.9
+  #     year: $99.9
+  #   button:
+  #     label: Begin Basic Plan
+  #     color: neutral
+  #     variant: subtle
+  #   features:
+  #     - One month/year of articles including,
+  #     - News Flash
+  #     - Theology
+  #     - Short Bio
+  #     - Stories
+  #     - Poetry
+  #     - And so much more!
+  # - title: Standard
+  #   description: A standard plan to get these wonderful articles every month.
+  #   price:
+  #     month: $19.9
+  #     year: $199.9
+  #   highlight: true
+  #   scale: true
+  #   button:
+  #     label: Begin Standard Plan
+  #   features:
+  #     - One month/year of articles including,
+  #     - An illustration
+  #     - If you're lucky, an interview
+  #     - Curious Facts
+  #     - Scientific Facts
+  #     - 1 extra page filled with articles
+  #     - And so much more!
+  # - title: Premium
+  #   description: A premium plan to get the best of the SDG Times.
+  #   price:
+  #     month: $29.9
+  #     year: $299.9
+  #   button:
+  #     label: Begin Premium Plan
+  #     color: neutral
+  #     variant: subtle
+  #   features:
+  #     - One month/year of articles including,
+  #     - An illustration
+  #     - Another extra page filled to the brim with articles
+  #     - Vocab matches
+  #     - Sudoku
+  #     - Binary puzzles
+  #     - And so much more!
 logos:
   title: Trusted by the world's best
   icons:

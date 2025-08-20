@@ -53,6 +53,13 @@ const hasProofs = computed(() => (props.proofs?.length ?? 0) > 0)
             No proofs provided.
           </p>
         </div>
+        <div v-if="item.label === 'Discussion'">
+          <p
+            class="pb-3.5 text-sm text-muted"
+          >
+            No discussion provided.
+          </p>
+        </div>
       </template>
     </UAccordion>
   </div>

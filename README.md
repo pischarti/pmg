@@ -59,3 +59,10 @@ How to stash changes:
 ```bash
 git stash --include-untracked
 ```
+
+How to clean up:
+
+```bash
+pnpm lint
+pnpm typecheck
+```
