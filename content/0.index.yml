@@ -1,15 +1,20 @@
-title: Welcome to the Westminster Study Center
-description: The Westminster Confession of Faith is a statement of faith that was produced by the Westminster Assembly in the 17th century. It is one of the most important documents in Reformed Christianity and has been adopted by many denominations around the world.
+title: The Wolfgangs
+description: The Wolfgangs are a team who're participating in Lego League.
 seo:
-  title: The Westminster Confession of Faith
-  description: The Westminster Confession of Faith is a statement of faith that was produced by the Westminster Assembly in the 17th century.
+  title: Wolfgangs
+  description: Wolfs are very cute.
 navigation: false
 hero:
   links:
-    - label: Start Reading
+    - label: Meet the Team.
       icon: i-lucide-book-open
       trailing: true
-      to: /wcf/chapter1
+      to: /wcf
+      size: xl
+    - label: Meet Wolfgang
+      icon: i-lucide-dog
+      trailing: true
+      to: /blog
       size: xl
 sections:
   - title: Why is the Westminster Confession of Faith important?

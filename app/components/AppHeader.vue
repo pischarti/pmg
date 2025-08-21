@@ -9,13 +9,17 @@ const { wcf } = await useWcf()
 
 const items = computed(() => [
   {
-    label: 'WCF',
+    label: 'Progress',
     to: '/wcf',
     active: route.path.startsWith('/wcf')
   },
   {
-    label: 'Donate',
+    label: 'The Team',
     to: '/pricing'
+  },
+  {
+    label: 'WOLFGANG',
+    to: '/blog'
   }
 ])
 
