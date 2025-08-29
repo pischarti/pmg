@@ -14,10 +14,6 @@ Cursor will automatically read these rules and apply them when:
 - Answering questions about the codebase
 - Making recommendations
 
-## Migration
-
-These rules were migrated from the old `.cursorrules` file to the new `.cursor/rules` structure for better organization and maintainability.
-
 ## Updating Rules
 
 To modify project rules:
