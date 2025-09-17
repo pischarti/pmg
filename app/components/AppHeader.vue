@@ -112,7 +112,7 @@ const nextChapter = computed(() =>
     />
 
     <template #right>
-      <UColorModeButton />
+      <!-- <UColorModeButton /> -->
 
       <UButton
         icon="i-lucide-log-in"

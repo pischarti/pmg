@@ -92,6 +92,29 @@ export const collections = {
       )
     })
   }),
+  wcfstudy: defineCollection({
+    type: 'data',
+    source: 'wcfstudy.yml',
+    schema: z.object({
+      Metadata: z.object({
+        Authors: z.array(z.string()),
+        OriginalLanguage: z.string(),
+        Title: z.string(),
+        Version: z.string(),
+        Year: z.string()
+      }),
+      Data: z.array(
+        z.object({
+          Chapter: z.string(),
+          Sections: z.array(
+            z.object({
+              Content: z.string()
+            })
+          )
+        })
+      )
+    })
+  }),
   authors: defineCollection({
     type: 'data',
     source: 'authors/**.yml',
