@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { AccordionItem } from '@nuxt/ui'
-import { useWcfDiscussion } from '#imports'
+// import { useWcfDiscussion } from '#imports'
 
 const props = defineProps<{
   discussion?: Array<{
@@ -10,7 +10,7 @@ const props = defineProps<{
   }>
 }>()
 
-const { getWcfStudy } = useWcfDiscussion()
+// const { getWcfStudy } = useWcfDiscussion()
 
 const sortedDiscussion = computed(() => {
   const list = props.discussion ?? []

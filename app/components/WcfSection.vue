@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import type { AccordionItem } from '@nuxt/ui'
 import WcfProofsAccordion from '~/components/WcfProofsAccordion.vue'
-import { WcfDiscussionAccordion } from '#components'
+// import { WcfDiscussionAccordion } from '#components'
 
 const items: AccordionItem[] = [
   {
@@ -55,10 +55,7 @@ const hasProofs = computed(() => (props.proofs?.length ?? 0) > 0)
           </p>
         </div>
         <div v-if="item.label === 'Discussion'">
-          <WcfDiscussionAccordion
-            v-if="hasDiscussion"
-            :discussion="discussion"
-          />
+          <!-- <WcfDiscussionAccordion/> -->
           <p
             class="pb-3.5 text-sm text-muted"
           >
