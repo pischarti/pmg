@@ -42,6 +42,9 @@
               code-cursor
               
               supabase-cli
+              cloudflared
+              google-cloud-sdk
+              firebase-tools
             ];
           };
         });
