@@ -11,8 +11,8 @@ var RootCmd = &cobra.Command{
 	Long:  `pmg is a tool for managing pmg`,
 }
 
-func Execute() {
-	RootCmd.Execute()
+func Execute() error {
+	return RootCmd.Execute()
 }
 
 func init() {
