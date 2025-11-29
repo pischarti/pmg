@@ -85,3 +85,11 @@ The repository includes a Go-based CLI for operational tasks.
   ```
 
   The command prints each record's type, name, content, TTL (with `auto` for managed TTLs), and whether it is proxied.
+
+- Sync DNS records from a YAML file (see `cmd/cloudflare/test.yaml` for the format):
+
+  ```bash
+  pmg cloudflare sync xilia.net --file dns.yaml --dry-run
+  ```
+
+  Supported actions per record are `add` (ensures the record matches the spec, creating or updating as needed) and `remove` (deletes matching records). Optional fields include `ttl` and `proxied`. Use `--dry-run` to preview the operations without applying changes.
