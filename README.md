@@ -66,3 +66,24 @@ How to clean up:
 pnpm lint
 pnpm typecheck
 ```
+
+## CLI helpers
+
+The repository includes a Go-based CLI for operational tasks.
+
+### Cloudflare DNS
+
+- Requires `go` (1.25+) and a Cloudflare API token with DNS read access.
+- Export your token before running commands:
+
+  ```bash
+  export CLOUDFLARE_API_TOKEN="<your-token>"
+  ```
+
+- List the DNS records for a zone:
+
+  ```bash
+  pmg cloudflare list example.com
+  ```
+
+  The command prints each record's type, name, content, TTL (with `auto` for managed TTLs), and whether it is proxied.
