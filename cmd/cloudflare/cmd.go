@@ -2,8 +2,8 @@ package cloudflare
 
 import (
 	"context"
+	"errors"
 	"fmt"
-	"os"
 
 	cf "github.com/cloudflare/cloudflare-go"
 	"github.com/pischarti/pmg/pkg/cloudflare"
@@ -23,6 +23,12 @@ var listCmd = &cobra.Command{
 	RunE:  runList,
 }
 
+var (
+	clientFactory = cloudflare.NewClientFromEnv
+	listRecords   = cloudflare.ListDNSRecords
+	renderTable   = cloudflare.RenderDNSRecordsTable
+)
+
 func init() {
 	Cmd.AddCommand(listCmd)
 }
@@ -30,27 +36,36 @@ func init() {
 func runList(cmd *cobra.Command, args []string) error {
 	domain := args[0]
 
-	token := os.Getenv("CLOUDFLARE_API_TOKEN")
-	if token == "" {
-		return fmt.Errorf("CLOUDFLARE_API_TOKEN environment variable must be set")
-	}
-
-	api, err := cf.NewWithAPIToken(token)
+	api, err := clientFactory()
 	if err != nil {
-		return fmt.Errorf("creating Cloudflare client: %w", err)
+		return err
 	}
 
 	ctx := context.Background()
 
-	records, err := cloudflare.ListDNSRecords(ctx, api, domain)
+	records, err := listRecords(ctx, api, domain)
 	if err != nil {
-		return err
+		return decorateAuthError(err)
 	}
 
 	if len(records) == 0 {
 		fmt.Fprintf(cmd.OutOrStdout(), "no DNS records found for %s\n", domain)
 		return nil
 	}
-	cloudflare.RenderDNSRecordsTable(cmd.OutOrStdout(), records)
+	renderTable(cmd.OutOrStdout(), records)
 	return nil
+}
+
+func decorateAuthError(err error) error {
+	var reqErr cf.RequestError
+	if errors.As(err, &reqErr) && reqErr.InternalErrorCodeIs(6003) {
+		return fmt.Errorf("%w (cloudflare error 6003: invalid request headers); ensure you are using either a valid API token (CLOUDFLARE_API_TOKEN) or an API key plus email (CLOUDFLARE_API_KEY and CLOUDFLARE_API_EMAIL)", err)
+	}
+
+	var apiErr *cf.Error
+	if errors.As(err, &apiErr) && apiErr.InternalErrorCodeIs(6003) {
+		return fmt.Errorf("%w (cloudflare error 6003: invalid request headers); ensure you are using either a valid API token (CLOUDFLARE_API_TOKEN) or an API key plus email (CLOUDFLARE_API_KEY and CLOUDFLARE_API_EMAIL)", err)
+	}
+
+	return err
 }

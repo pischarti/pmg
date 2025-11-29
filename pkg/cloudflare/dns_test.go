@@ -123,3 +123,55 @@ func TestRenderDNSRecordsTable(t *testing.T) {
 		}
 	}
 }
+
+func TestNewClientFromEnv(t *testing.T) {
+	t.Run("token", func(t *testing.T) {
+		t.Setenv("CLOUDFLARE_API_TOKEN", "token")
+		client, err := NewClientFromEnv()
+		if err != nil {
+			t.Fatalf("NewClientFromEnv returned error: %v", err)
+		}
+		if client == nil {
+			t.Fatal("expected client, got nil")
+		}
+	})
+
+	t.Run("key-email", func(t *testing.T) {
+		t.Setenv("CLOUDFLARE_API_KEY", "key")
+		t.Setenv("CLOUDFLARE_API_EMAIL", "user@example.com")
+		client, err := NewClientFromEnv()
+		if err != nil {
+			t.Fatalf("NewClientFromEnv returned error: %v", err)
+		}
+		if client == nil {
+			t.Fatal("expected client, got nil")
+		}
+	})
+
+	t.Run("missing-token", func(t *testing.T) {
+		t.Setenv("CLOUDFLARE_API_TOKEN", "")
+		t.Setenv("CLOUDFLARE_API_KEY", "")
+		t.Setenv("CLOUDFLARE_API_EMAIL", "")
+		if _, err := NewClientFromEnv(); err == nil {
+			t.Fatal("expected error, got nil")
+		}
+	})
+
+	t.Run("missing-email", func(t *testing.T) {
+		t.Setenv("CLOUDFLARE_API_TOKEN", "")
+		t.Setenv("CLOUDFLARE_API_KEY", "key")
+		t.Setenv("CLOUDFLARE_API_EMAIL", "")
+		if _, err := NewClientFromEnv(); err == nil {
+			t.Fatal("expected error, got nil")
+		}
+	})
+
+	t.Run("missing-key", func(t *testing.T) {
+		t.Setenv("CLOUDFLARE_API_TOKEN", "")
+		t.Setenv("CLOUDFLARE_API_KEY", "")
+		t.Setenv("CLOUDFLARE_API_EMAIL", "user@example.com")
+		if _, err := NewClientFromEnv(); err == nil {
+			t.Fatal("expected error, got nil")
+		}
+	})
+}

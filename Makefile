@@ -1,6 +1,6 @@
-.PHONY: help auth-gcloud auth-gcloud-ad auth-firebase auth-cloudflare auth-all export-cloudflare-token go-test go-lint go-fmt all
+.PHONY: help auth-gcloud auth-gcloud-ad auth-firebase auth-cloudflare auth-all export-cloudflare-token go-test go-lint go-fmt go-cover all
 
-all: go-fmt go-lint go-test
+all: go-fmt go-lint go-test go-cover
 
 help:
 	@echo "Available targets:"
@@ -14,6 +14,7 @@ help:
 	@echo "  make go-test          - Run Go unit tests."
 	@echo "  make go-lint          - Run Go static analysis (go vet)."
 	@echo "  make go-fmt           - Format Go sources with gofmt."
+	@echo "  make go-cover         - Run Go tests with coverage and generate coverage.out."
 
 auth-gcloud:
 	@echo "Launching gcloud auth flow..."
@@ -51,4 +52,9 @@ go-lint:
 go-fmt:
 	@echo "Running gofmt..."
 	gofmt -w $$(find . -name '*.go' -not -path './node_modules/*' -not -path './.git/*')
+
+go-cover:
+	@echo "Running Go tests with coverage..."
+	go test ./... -coverprofile=coverage.out
+	@go tool cover -func=coverage.out
 
