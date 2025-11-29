@@ -38,6 +38,7 @@ func resetGlobals(t *testing.T) {
 	syncRecordsFunc = pkgcf.SyncDNSRecords
 	syncFilePath = ""
 	syncDryRun = false
+	syncShowTable = true
 }
 
 func TestRunList_NoRecords(t *testing.T) {
@@ -208,7 +209,7 @@ func TestRunSync_Success(t *testing.T) {
 		return &noopWriteAPI{}, nil
 	}
 
-	syncRecordsFunc = func(ctx context.Context, api pkgcf.DNSWriteAPI, domain string, specs []pkgcf.RecordSpec, w io.Writer, dryRun bool) error {
+	syncRecordsFunc = func(ctx context.Context, api pkgcf.DNSWriteAPI, domain string, specs []pkgcf.RecordSpec, w io.Writer, dryRun bool, showTable bool) error {
 		if domain != "example.com" {
 			t.Fatalf("unexpected domain %s", domain)
 		}
@@ -217,6 +218,9 @@ func TestRunSync_Success(t *testing.T) {
 		}
 		if dryRun {
 			t.Fatalf("expected dryRun false")
+		}
+		if !showTable {
+			t.Fatalf("expected showTable true")
 		}
 		fmt.Fprintln(w, "synced")
 		return nil
@@ -248,7 +252,7 @@ func TestRunSync_DecoratedError(t *testing.T) {
 	}
 
 	reqErr := cf.NewRequestError(&cf.Error{ErrorCodes: []int{6003}})
-	syncRecordsFunc = func(ctx context.Context, api pkgcf.DNSWriteAPI, domain string, specs []pkgcf.RecordSpec, w io.Writer, dryRun bool) error {
+	syncRecordsFunc = func(ctx context.Context, api pkgcf.DNSWriteAPI, domain string, specs []pkgcf.RecordSpec, w io.Writer, dryRun bool, showTable bool) error {
 		if !dryRun {
 			t.Fatalf("expected dryRun true")
 		}
@@ -294,11 +298,14 @@ func TestRunSync_DryRunFlag(t *testing.T) {
 	}
 
 	calledDryRun := false
-	syncRecordsFunc = func(ctx context.Context, api pkgcf.DNSWriteAPI, domain string, specs []pkgcf.RecordSpec, w io.Writer, dryRun bool) error {
+	syncRecordsFunc = func(ctx context.Context, api pkgcf.DNSWriteAPI, domain string, specs []pkgcf.RecordSpec, w io.Writer, dryRun bool, showTable bool) error {
 		if !dryRun {
 			t.Fatalf("expected dryRun true")
 		}
 		calledDryRun = true
+		if !showTable {
+			t.Fatalf("expected showTable true")
+		}
 		return nil
 	}
 

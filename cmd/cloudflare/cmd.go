@@ -39,14 +39,16 @@ var (
 )
 
 var (
-	syncFilePath string
-	syncDryRun   bool
+	syncFilePath  string
+	syncDryRun    bool
+	syncShowTable bool
 )
 
 func init() {
 	Cmd.AddCommand(listCmd)
 	syncCmd.Flags().StringVarP(&syncFilePath, "file", "f", "", "Path to YAML file describing DNS records")
 	syncCmd.Flags().BoolVar(&syncDryRun, "dry-run", false, "Preview changes without modifying Cloudflare")
+	syncCmd.Flags().BoolVar(&syncShowTable, "table", true, "Render a tabular summary of sync actions")
 	cobra.CheckErr(syncCmd.MarkFlagRequired("file"))
 	Cmd.AddCommand(syncCmd)
 }
@@ -88,7 +90,8 @@ func runSync(cmd *cobra.Command, args []string) error {
 	}
 
 	ctx := context.Background()
-	if err := syncRecordsFunc(ctx, api, domain, specs, cmd.OutOrStdout(), syncDryRun); err != nil {
+	showTable := syncShowTable || syncDryRun
+	if err := syncRecordsFunc(ctx, api, domain, specs, cmd.OutOrStdout(), syncDryRun, showTable); err != nil {
 		return utils.DecorateAuthError(err)
 	}
 

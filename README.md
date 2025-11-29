@@ -92,4 +92,4 @@ The repository includes a Go-based CLI for operational tasks.
   pmg cloudflare sync xilia.net --file dns.yaml --dry-run
   ```
 
-  Supported actions per record are `add` (ensures the record matches the spec, creating or updating as needed) and `remove` (deletes matching records). Optional fields include `ttl` and `proxied`. Use `--dry-run` to preview the operations without applying changes.
+  Supported actions per record are `add` (ensures the record matches the spec, creating or updating as needed) and `remove` (deletes matching records). Optional fields include `ttl` and `proxied`. `--dry-run` previews the changes, and the command renders a tabular diff by default (pass `--table=false` to suppress it).

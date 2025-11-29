@@ -82,7 +82,7 @@ func LoadSyncConfig(path string) ([]RecordSpec, error) {
 }
 
 // SyncDNSRecords applies the desired record specifications to Cloudflare.
-func SyncDNSRecords(ctx context.Context, api DNSWriteAPI, domain string, specs []RecordSpec, out io.Writer, dryRun bool) error {
+func SyncDNSRecords(ctx context.Context, api DNSWriteAPI, domain string, specs []RecordSpec, out io.Writer, dryRun bool, showTable bool) error {
 	if api == nil {
 		return errors.New("cloudflare API client is nil")
 	}
@@ -97,7 +97,7 @@ func SyncDNSRecords(ctx context.Context, api DNSWriteAPI, domain string, specs [
 	rc := cf.ZoneIdentifier(zoneID)
 
 	var dryTable table.Writer
-	if dryRun {
+	if dryRun || showTable {
 		dryTable = table.NewWriter()
 		dryTable.SetOutputMirror(out)
 		dryTable.AppendHeader(table.Row{"ACTION", "TYPE", "NAME", "CURRENT", "DESIRED", "DETAIL"})
@@ -193,6 +193,9 @@ func ensureRecord(ctx context.Context, api DNSWriteAPI, rc *cf.ResourceContainer
 		return fmt.Errorf("creating record %s %s -> %s: %w", spec.Type, specName, spec.Value, err)
 	}
 
+	if dryTable != nil {
+		dryTable.AppendRow(table.Row{"ADD", spec.Type, specName, "", spec.Value, "created"})
+	}
 	fmt.Fprintf(out, "added %s %s -> %s\n", spec.Type, specName, spec.Value)
 	return nil
 }
@@ -201,8 +204,8 @@ func removeRecord(ctx context.Context, api DNSWriteAPI, rc *cf.ResourceContainer
 	specName := trimTrailingDot(spec.Name)
 	desiredValue := normalizeRecordValue(spec.Value)
 
+	// Search by name first (more flexible), then filter by type
 	records, _, err := api.ListDNSRecords(ctx, rc, cf.ListDNSRecordsParams{
-		Type: spec.Type,
 		Name: specName,
 	})
 	if err != nil {
@@ -211,7 +214,11 @@ func removeRecord(ctx context.Context, api DNSWriteAPI, rc *cf.ResourceContainer
 
 	var matched []cf.DNSRecord
 	for _, record := range records {
-		if !strings.EqualFold(trimTrailingDot(record.Name), specName) {
+		recordName := trimTrailingDot(record.Name)
+		if !strings.EqualFold(recordName, specName) {
+			continue
+		}
+		if !strings.EqualFold(record.Type, spec.Type) {
 			continue
 		}
 		if spec.Value == "" || normalizeRecordValue(record.Content) == desiredValue {
@@ -220,8 +227,18 @@ func removeRecord(ctx context.Context, api DNSWriteAPI, rc *cf.ResourceContainer
 	}
 
 	if len(matched) == 0 {
+		// Try to find any records with this name to show in the table
+		var currentValue string
+		if allRecords, _, err := api.ListDNSRecords(ctx, rc, cf.ListDNSRecordsParams{Name: specName}); err == nil {
+			for _, r := range allRecords {
+				if strings.EqualFold(trimTrailingDot(r.Name), specName) && strings.EqualFold(r.Type, spec.Type) {
+					currentValue = r.Content
+					break
+				}
+			}
+		}
 		if dryTable != nil {
-			dryTable.AppendRow(table.Row{"SKIP", spec.Type, specName, spec.Value, "no match"})
+			dryTable.AppendRow(table.Row{"SKIP", spec.Type, specName, currentValue, spec.Value, "no match"})
 			return nil
 		}
 		fmt.Fprintf(out, "skip remove %s %s (no match)\n", spec.Type, specName)
@@ -244,6 +261,9 @@ func removeRecord(ctx context.Context, api DNSWriteAPI, rc *cf.ResourceContainer
 	for _, record := range matched {
 		if err := api.DeleteDNSRecord(ctx, rc, record.ID); err != nil {
 			return fmt.Errorf("deleting record %s %s -> %s: %w", spec.Type, specName, record.Content, err)
+		}
+		if dryTable != nil {
+			dryTable.AppendRow(table.Row{"REMOVE", spec.Type, trimTrailingDot(record.Name), record.Content, spec.Value, "removed"})
 		}
 		fmt.Fprintf(out, "removed %s %s -> %s\n", spec.Type, specName, record.Content)
 	}
@@ -297,6 +317,9 @@ func syncMatchingRecord(ctx context.Context, api DNSWriteAPI, rc *cf.ResourceCon
 		return fmt.Errorf("updating record %s %s -> %s: %w", spec.Type, specName, spec.Value, err)
 	}
 
+	if dryTable != nil {
+		dryTable.AppendRow(table.Row{"UPDATE", spec.Type, specName, record.Content, spec.Value, diffSummary(record, desiredTTL, proxiedPtr)})
+	}
 	fmt.Fprintf(out, "updated %s %s -> %s\n", spec.Type, specName, spec.Value)
 	return nil
 }
@@ -326,6 +349,9 @@ func syncExistingRecord(ctx context.Context, api DNSWriteAPI, rc *cf.ResourceCon
 		return fmt.Errorf("updating record %s %s -> %s: %w", spec.Type, specName, spec.Value, err)
 	}
 
+	if dryTable != nil {
+		dryTable.AppendRow(table.Row{"UPDATE", spec.Type, specName, record.Content, spec.Value, diffSummary(record, ttlForRecord(spec, record), spec.Proxied)})
+	}
 	fmt.Fprintf(out, "updated %s %s -> %s\n", spec.Type, specName, spec.Value)
 	return nil
 }
@@ -357,5 +383,10 @@ func trimTrailingDot(name string) string {
 }
 
 func normalizeRecordValue(val string) string {
-	return trimTrailingDot(strings.TrimSpace(val))
+	val = strings.TrimSpace(val)
+	// Strip surrounding quotes (common in TXT records from Cloudflare)
+	if len(val) >= 2 && val[0] == '"' && val[len(val)-1] == '"' {
+		val = val[1 : len(val)-1]
+	}
+	return trimTrailingDot(val)
 }
