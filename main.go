@@ -1,7 +1,13 @@
 package main
 
-import "github.com/pischarti/pmg/cmd"
+import (
+	"os"
+
+	"github.com/pischarti/pmg/cmd"
+)
 
 func main() {
-	cmd.Execute()
+	if err := cmd.Execute(); err != nil {
+		os.Exit(1)
+	}
 }

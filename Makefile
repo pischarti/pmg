@@ -1,6 +1,6 @@
-.PHONY: help auth-gcloud auth-gcloud-ad auth-firebase auth-cloudflare auth-all export-cloudflare-token go-test go-lint all
+.PHONY: help auth-gcloud auth-gcloud-ad auth-firebase auth-cloudflare auth-all export-cloudflare-token go-test go-lint go-fmt all
 
-all: go-lint go-test
+all: go-fmt go-lint go-test
 
 help:
 	@echo "Available targets:"
@@ -13,6 +13,7 @@ help:
 	@echo "  make export-cloudflare-token TOKEN=<token> - Export Cloudflare API token in this shell."
 	@echo "  make go-test          - Run Go unit tests."
 	@echo "  make go-lint          - Run Go static analysis (go vet)."
+	@echo "  make go-fmt           - Format Go sources with gofmt."
 
 auth-gcloud:
 	@echo "Launching gcloud auth flow..."
@@ -46,4 +47,8 @@ go-test:
 go-lint:
 	@echo "Running go vet..."
 	go vet ./...
+
+go-fmt:
+	@echo "Running gofmt..."
+	gofmt -w $$(find . -name '*.go' -not -path './node_modules/*' -not -path './.git/*')
 
