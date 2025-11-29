@@ -153,14 +153,9 @@ func ensureRecord(ctx context.Context, api DNSWriteAPI, rc *cf.ResourceContainer
 		return syncExistingRecord(ctx, api, rc, spec, specName, desiredValue, out, dryRun, dryTable, existing)
 	}
 
-	if altRecords, _, err := api.ListDNSRecords(ctx, rc, cf.ListDNSRecordsParams{Name: specName}); err == nil {
-		for i := range altRecords {
-			record := &altRecords[i]
-			if strings.EqualFold(trimTrailingDot(record.Name), specName) {
-				return syncExistingRecord(ctx, api, rc, spec, specName, desiredValue, out, dryRun, dryTable, record)
-			}
-		}
-	}
+	// Check for records with same name but different type - we should NOT update these,
+	// as multiple record types can coexist for the same name (e.g., A and TXT)
+	// Only search for alternative records if we haven't found a matching type already
 
 	if dryRun {
 		if dryTable != nil {

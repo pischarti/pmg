@@ -830,18 +830,25 @@ func TestSyncDNSRecords_UpdateExistingRecordType(t *testing.T) {
 		{Name: "example.com", Type: "CNAME", Action: ActionAdd, Value: "target.example.com"},
 	}
 
+	// When trying to add a CNAME where an A record exists, it should try to create the CNAME
+	// (not update the A record). The conflict will be handled by Cloudflare API.
 	if err := SyncDNSRecords(ctx, api, "example.com", specs, &out, false, false); err != nil {
 		t.Fatalf("SyncDNSRecords returned error: %v", err)
 	}
 
-	if len(api.updateCalls) != 1 {
-		t.Fatalf("expected update call, got %d", len(api.updateCalls))
+	// Should try to create CNAME (not update A to CNAME)
+	if len(api.createCalls) != 1 {
+		t.Fatalf("expected 1 create call for CNAME, got %d", len(api.createCalls))
 	}
-	if api.updateCalls[0].Type != "CNAME" {
-		t.Fatalf("expected type CNAME, got %s", api.updateCalls[0].Type)
+	if api.createCalls[0].Type != "CNAME" {
+		t.Fatalf("expected created record type CNAME, got %s", api.createCalls[0].Type)
 	}
-	if api.updateCalls[0].Content != "target.example.com" {
-		t.Fatalf("expected content target.example.com, got %s", api.updateCalls[0].Content)
+	if api.createCalls[0].Content != "target.example.com" {
+		t.Fatalf("expected content target.example.com, got %s", api.createCalls[0].Content)
+	}
+	// Should not update the existing A record
+	if len(api.updateCalls) != 0 {
+		t.Fatalf("expected no update calls (should create new CNAME, not update A), got %d", len(api.updateCalls))
 	}
 }
 
@@ -861,10 +868,11 @@ func TestSyncDNSRecords_AddCnameConflict_DryRun(t *testing.T) {
 		t.Fatalf("SyncDNSRecords returned error: %v", err)
 	}
 
-	// In dry-run, we show what would happen - since there's a CNAME, we'd try to update it to A
-	// The conflict would only be detected on actual creation, not in dry-run
-	if !stringsContains(out.String(), "UPDATE") || !stringsContains(out.String(), "example.com") {
-		t.Fatalf("expected UPDATE in dry-run output (would update existing CNAME to A), got %q", out.String())
+	// In dry-run, we show what would happen - since there's a CNAME and we're adding an A,
+	// we'd try to create a new A record (not update the CNAME). The conflict would only be
+	// detected on actual creation, not in dry-run.
+	if !stringsContains(out.String(), "ADD") || !stringsContains(out.String(), "example.com") {
+		t.Fatalf("expected ADD in dry-run output (would create new A record), got %q", out.String())
 	}
 }
 
@@ -888,6 +896,106 @@ func TestSyncDNSRecords_RemoveWithTableOutput(t *testing.T) {
 
 	if !stringsContains(out.String(), "REMOVE") {
 		t.Fatalf("expected REMOVE in table output, got %q", out.String())
+	}
+}
+
+func TestSyncDNSRecords_MultipleTypesSameName(t *testing.T) {
+	ctx := context.Background()
+	api := &fakeWriteAPI{
+		zoneID: "zone",
+		records: []cf.DNSRecord{
+			{ID: "txt-1", Type: "TXT", Name: "example.com", Content: "existing-txt"},
+		},
+	}
+
+	var out bytes.Buffer
+	specs := []RecordSpec{
+		{Name: "example.com", Type: "A", Action: ActionAdd, Value: "1.2.3.4"},
+		{Name: "example.com", Type: "TXT", Action: ActionAdd, Value: "new-txt"},
+	}
+
+	if err := SyncDNSRecords(ctx, api, "example.com", specs, &out, false, false); err != nil {
+		t.Fatalf("SyncDNSRecords returned error: %v", err)
+	}
+
+	// Should create A record and update TXT record (not convert TXT to A)
+	if len(api.createCalls) != 1 {
+		t.Fatalf("expected 1 create call for A record, got %d", len(api.createCalls))
+	}
+	if api.createCalls[0].Type != "A" {
+		t.Fatalf("expected created record to be type A, got %s", api.createCalls[0].Type)
+	}
+	if api.createCalls[0].Name != "example.com" {
+		t.Fatalf("expected created record name to be example.com, got %s", api.createCalls[0].Name)
+	}
+
+	// Should update the existing TXT record
+	if len(api.updateCalls) != 1 {
+		t.Fatalf("expected 1 update call for TXT record, got %d", len(api.updateCalls))
+	}
+	if api.updateCalls[0].Type != "TXT" {
+		t.Fatalf("expected updated record to be type TXT, got %s", api.updateCalls[0].Type)
+	}
+	if api.updateCalls[0].Content != "new-txt" {
+		t.Fatalf("expected updated TXT content to be 'new-txt', got %s", api.updateCalls[0].Content)
+	}
+
+	// Verify both records exist in the final state
+	foundA := false
+	foundTXT := false
+	for _, call := range api.createCalls {
+		if call.Type == "A" && call.Name == "example.com" {
+			foundA = true
+		}
+	}
+	for _, call := range api.updateCalls {
+		if call.Type == "TXT" && call.Name == "example.com" {
+			foundTXT = true
+		}
+	}
+	if !foundA {
+		t.Error("A record was not created")
+	}
+	if !foundTXT {
+		t.Error("TXT record was not updated")
+	}
+}
+
+func TestSyncDNSRecords_AddBothAAndTXTForSameName(t *testing.T) {
+	ctx := context.Background()
+	api := &fakeWriteAPI{
+		zoneID:  "zone",
+		records: []cf.DNSRecord{}, // No existing records
+	}
+
+	var out bytes.Buffer
+	specs := []RecordSpec{
+		{Name: "example.com", Type: "A", Action: ActionAdd, Value: "1.2.3.4"},
+		{Name: "example.com", Type: "TXT", Action: ActionAdd, Value: "txt-value"},
+	}
+
+	if err := SyncDNSRecords(ctx, api, "example.com", specs, &out, false, false); err != nil {
+		t.Fatalf("SyncDNSRecords returned error: %v", err)
+	}
+
+	// Should create both A and TXT records
+	if len(api.createCalls) != 2 {
+		t.Fatalf("expected 2 create calls, got %d", len(api.createCalls))
+	}
+
+	types := make(map[string]bool)
+	for _, call := range api.createCalls {
+		types[call.Type] = true
+		if call.Name != "example.com" {
+			t.Errorf("expected all records to have name 'example.com', got %s", call.Name)
+		}
+	}
+
+	if !types["A"] {
+		t.Error("A record was not created")
+	}
+	if !types["TXT"] {
+		t.Error("TXT record was not created")
 	}
 }
 
