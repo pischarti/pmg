@@ -73,12 +73,10 @@ The repository includes a Go-based CLI for operational tasks.
 
 ### Cloudflare DNS
 
-- Requires `go` (1.25+) and a Cloudflare API token with DNS read access.
-- Export your token before running commands:
-
-  ```bash
-  export CLOUDFLARE_API_TOKEN="<your-token>"
-  ```
+- Requires `go` (1.25+) and Cloudflare credentials. You can authenticate with either:
+  - an API token: `export CLOUDFLARE_API_TOKEN="<token>"`
+  - or an API key and email: `export CLOUDFLARE_API_KEY="<key>"; export CLOUDFLARE_API_EMAIL="<email>"`
+- `make export-cloudflare-token TOKEN=<token>` will append the export command to `.env.cloudflare`; source that file to load the token in a shell.
 
 - List the DNS records for a zone:
 
