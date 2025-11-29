@@ -29,3 +29,4 @@ cmd/cloudflare/test.yaml
 # VSC
 .history
 supabase
+dns.yaml

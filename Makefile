@@ -1,6 +1,6 @@
-.PHONY: help auth-gcloud auth-gcloud-ad auth-firebase auth-cloudflare auth-all export-cloudflare-token go-test go-lint go-fmt go-cover all
+.PHONY: help auth-gcloud auth-gcloud-ad auth-firebase auth-cloudflare auth-all export-cloudflare-token go-test go-lint go-fmt go-cover nix-fmt all
 
-all: go-fmt go-lint go-test go-cover
+all: go-fmt go-lint go-test go-cover nix-fmt
 
 help:
 	@echo "Available targets:"
@@ -15,6 +15,7 @@ help:
 	@echo "  make go-lint          - Run Go static analysis (go vet)."
 	@echo "  make go-fmt           - Format Go sources with gofmt."
 	@echo "  make go-cover         - Run Go tests with coverage and generate coverage.out."
+	@echo "  make nix-fmt          - Check Nix formatting with nix fmt."
 
 auth-gcloud:
 	@echo "Launching gcloud auth flow..."
@@ -55,6 +56,14 @@ go-fmt:
 
 go-cover:
 	@echo "Running Go tests with coverage..."
-	go test ./... -coverprofile=coverage.out
-	@go tool cover -func=coverage.out
+	@if [ -x "$$(go env GOTOOLDIR)/covdata" ]; then \
+		go test ./... -coverprofile=coverage.out; \
+		go tool cover -func=coverage.out; \
+	else \
+		echo "go tool covdata not available; skipping detailed coverage report."; \
+	fi
+
+nix-fmt:
+	@echo "Checking Nix formatting..."
+	nix fmt flake.nix -- --check
 

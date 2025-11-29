@@ -1,9 +1,12 @@
 {
   description = "Development environment";
 
-  inputs = { nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable"; };
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+  };
 
-  outputs = { self, nixpkgs }:
+  outputs =
+    { self, nixpkgs }:
     let
       inherit (nixpkgs.lib) genAttrs;
       supportedSystems = [
@@ -12,41 +15,57 @@
         "x86_64-linux"
       ];
       forAllSystems = f: genAttrs supportedSystems (system: f system);
-    in {
-      devShells = forAllSystems (system:
-        let pkgs = import nixpkgs { 
-          inherit system; 
-          config.allowUnfree = true; 
-        };
-        in {
+    in
+    {
+      devShells = forAllSystems (
+        system:
+        let
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+          };
+        in
+        {
           default = pkgs.mkShell {
             buildInputs = with pkgs; [
               hello
               cowsay
               lolcat
-              
+
               zarf
               kubernetes-helm
               fluxcd
               kustomize_4
-                        
+
               nodejs
               pnpm_10
-          
+
               go
               python314
-              
+
               jq
               git
               gh
               code-cursor
-              
+
               supabase-cli
               cloudflared
               google-cloud-sdk
               firebase-tools
+              go-tools
             ];
           };
-        });
+        }
+      );
+      formatter = forAllSystems (
+        system:
+        let
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+          };
+        in
+        if pkgs ? nixfmt-rfc-style then pkgs.nixfmt-rfc-style else pkgs.nixfmt
+      );
     };
 }

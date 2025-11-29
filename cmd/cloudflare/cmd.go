@@ -2,11 +2,10 @@ package cloudflare
 
 import (
 	"context"
-	"errors"
 	"fmt"
 
-	cf "github.com/cloudflare/cloudflare-go"
 	"github.com/pischarti/pmg/pkg/cloudflare"
+	"github.com/pischarti/pmg/pkg/utils"
 	"github.com/spf13/cobra"
 )
 
@@ -23,14 +22,33 @@ var listCmd = &cobra.Command{
 	RunE:  runList,
 }
 
+var syncCmd = &cobra.Command{
+	Use:   "sync <domain>",
+	Short: "Sync DNS records from a YAML specification",
+	Args:  cobra.ExactArgs(1),
+	RunE:  runSync,
+}
+
 var (
-	clientFactory = cloudflare.NewClientFromEnv
-	listRecords   = cloudflare.ListDNSRecords
-	renderTable   = cloudflare.RenderDNSRecordsTable
+	clientFactory     = cloudflare.NewClientFromEnv
+	listRecords       = cloudflare.ListDNSRecords
+	renderTable       = cloudflare.RenderDNSRecordsTable
+	loadSyncConfig    = cloudflare.LoadSyncConfig
+	syncClientFactory = cloudflare.NewWriteClientFromEnv
+	syncRecordsFunc   = cloudflare.SyncDNSRecords
+)
+
+var (
+	syncFilePath string
+	syncDryRun   bool
 )
 
 func init() {
 	Cmd.AddCommand(listCmd)
+	syncCmd.Flags().StringVarP(&syncFilePath, "file", "f", "", "Path to YAML file describing DNS records")
+	syncCmd.Flags().BoolVar(&syncDryRun, "dry-run", false, "Preview changes without modifying Cloudflare")
+	cobra.CheckErr(syncCmd.MarkFlagRequired("file"))
+	Cmd.AddCommand(syncCmd)
 }
 
 func runList(cmd *cobra.Command, args []string) error {
@@ -45,7 +63,7 @@ func runList(cmd *cobra.Command, args []string) error {
 
 	records, err := listRecords(ctx, api, domain)
 	if err != nil {
-		return decorateAuthError(err)
+		return utils.DecorateAuthError(err)
 	}
 
 	if len(records) == 0 {
@@ -56,16 +74,23 @@ func runList(cmd *cobra.Command, args []string) error {
 	return nil
 }
 
-func decorateAuthError(err error) error {
-	var reqErr cf.RequestError
-	if errors.As(err, &reqErr) && reqErr.InternalErrorCodeIs(6003) {
-		return fmt.Errorf("%w (cloudflare error 6003: invalid request headers); ensure you are using either a valid API token (CLOUDFLARE_API_TOKEN) or an API key plus email (CLOUDFLARE_API_KEY and CLOUDFLARE_API_EMAIL)", err)
+func runSync(cmd *cobra.Command, args []string) error {
+	domain := args[0]
+
+	specs, err := loadSyncConfig(syncFilePath)
+	if err != nil {
+		return err
 	}
 
-	var apiErr *cf.Error
-	if errors.As(err, &apiErr) && apiErr.InternalErrorCodeIs(6003) {
-		return fmt.Errorf("%w (cloudflare error 6003: invalid request headers); ensure you are using either a valid API token (CLOUDFLARE_API_TOKEN) or an API key plus email (CLOUDFLARE_API_KEY and CLOUDFLARE_API_EMAIL)", err)
+	api, err := syncClientFactory()
+	if err != nil {
+		return err
 	}
 
-	return err
+	ctx := context.Background()
+	if err := syncRecordsFunc(ctx, api, domain, specs, cmd.OutOrStdout(), syncDryRun); err != nil {
+		return utils.DecorateAuthError(err)
+	}
+
+	return nil
 }
